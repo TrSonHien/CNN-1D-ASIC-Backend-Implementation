@@ -1,0 +1,73 @@
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking placement blockage.....
+placeBlkGrid grid_type = 1 
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_low and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_low and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_high and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_high and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank0/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank0/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank1/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank1/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank2/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank2/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank3/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank3/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank0/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank0/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank1/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank1/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank2/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank2/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank3/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank3/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (EMS-27):	Message (IMPFP-10013) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 64.172405
+TU for constraint module  u_global_arbiter = 9.280593
+TU for constraint module  u_controller = 25.666875
+TU for constraint module  u_ifm_arbiter = 12.430967
+TU for constraint module  u_line_buffer = 32.349449
+TU for constraint module  u_pea = 84580339200000.000000
+Effective Utilizations
+
+Average macro density = 0.000.
+Average module density = 0.237.
+Density for module 'u_global_arbiter' = 0.235.
+       = stdcell_area 1434 sites (381 um^2) / alloc_area 6093 sites (1621 um^2).
+Density for module 'u_controller' = 0.371.
+       = stdcell_area 25386 sites (6753 um^2) / alloc_area 68351 sites (18181 um^2).
+Density for module 'u_ifm_arbiter' = 0.242.
+       = stdcell_area 18180 sites (4836 um^2) / alloc_area 74991 sites (19948 um^2).
+Density for module 'u_line_buffer' = 0.416.
+       = stdcell_area 20141 sites (5358 um^2) / alloc_area 48407 sites (12876 um^2).
+Pure std cell Density 0.234451
+ Density for the rest of the design = 0.231.
+       = stdcell_area 1190549 sites (316686 um^2) / alloc_area 5158038 sites (1372038 um^2).
+Density for the design = 0.234.
+       = stdcell_area 1255690 sites (334014 um^2) / alloc_area 5355880 sites (1424664 um^2).
+Pin Density = 0.06654.
+            = total # of pins 769897 / total area 11570196.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013         84  Halo should be created around block %s a...
+*** Message Summary: 84 warning(s), 0 error(s)
+

@@ -1,0 +1,1509 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Aug-08 01:04:49 (2026-Aug-07 18:04:49 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: CNN_1D_Core_USE_ASIC_SRAM1
+*
+*	Liberty Libraries used: 
+*	        func_view_setup: /home/hients/my_design/CNN_300_cp3/SAVED/postCTS_met.invs.dat/libs/mmmc/stdcells-wc.lib
+*	        func_view_setup: /home/hients/my_design/CNN_300_cp3/SAVED/postCTS_met.invs.dat/libs/mmmc/SRAM_32x256_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/CNN_300_cp3/SAVED/postCTS_met.invs.dat/libs/mmmc/SRAM_16x1024_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/CNN_300_cp3/SAVED/postCTS_met.invs.dat/libs/mmmc/SRAM_16x4096_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/CNN_300_cp3/SAVED/postCTS_met.invs.dat/libs/mmmc/SRAM_16x256_1rw_SS_1p0V_25C.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:       0.95 
+*
+*       Power View : func_view_setup
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /home/hients/my_design/CNN_300_cp3/rpt/06_route_opt/postroute_power.rpt -hierarchy all
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:      147.03148143 	   68.6115%
+Total Switching Power:      60.29262258 	   28.1352%
+Total Leakage Power:         6.97163653 	    3.2533%
+Total Power:               214.29574054 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                          23.1       1.993       1.047       26.14        12.2 
+Macro                               66.4      0.1426      0.8514        67.4       31.45 
+IO                                     0           0           0           0           0 
+Combinational                      54.28       53.65       5.014         113       52.71 
+Clock (Combinational)               2.91       4.438     0.05248         7.4       3.453 
+Clock (Sequential)                0.3336      0.0651    0.007266      0.4059      0.1894 
+-----------------------------------------------------------------------------------------
+Total                                147       60.29       6.972       214.3         100 
+-----------------------------------------------------------------------------------------
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk_sys                            3.244       4.503     0.05975       7.806       3.643 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)       3.244       4.503     0.05975       7.806       3.643 
+-----------------------------------------------------------------------------------------
+Clock: clk_sys
+Clock Period: 0.003334 usec 
+Clock Toggle Rate:   599.8800 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                      0.95        147       60.29       6.972       214.3         100 
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:      147.03148143 	   68.6115%
+Total Switching Power:      60.29262258 	   28.1352%
+Total Leakage Power:         6.97163653 	    3.2533%
+Total Power:               214.29574054 
+-----------------------------------------------------------------------------------------
+
+
+Hierarchy                       Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+u_global_arbiter                   0.134     0.08755     0.02549       0.247      0.1153  
+u_controller                       1.037      0.8547      0.1157       2.007      0.9365  
+u_instruction_memory               1.512     0.02707     0.02479       1.564      0.7296  
+u_weight_memory                    20.67     0.05887      0.2918       21.02       9.808  
+u_bias_memory                      1.722        0.07     0.03942       1.831      0.8546  
+u_ping_fmap_memory                 22.54      0.4606       0.427       23.43       10.93  
+u_pong_fmap_memory                 22.76       0.541      0.4564       23.76       11.09  
+u_ifm_arbiter                     0.4092      0.4487      0.1021        0.96       0.448  
+u_line_buffer                       0.86      0.5394     0.08217       1.482      0.6914  
+u_pea                              74.41        56.6       5.343       136.3       63.63  
+u_pea/gen_row_0__gen_col_0__u_pe
+                                  0.9291      0.6598     0.06029       1.649      0.7695  
+u_pea/gen_row_0__gen_col_1__u_pe
+                                   1.052      0.7648     0.07046       1.887      0.8805  
+u_pea/gen_row_0__gen_col_2__u_pe
+                                  0.9452      0.6761     0.06095       1.682       0.785  
+u_pea/gen_row_0__gen_col_3__u_pe
+                                    1.06      0.7677     0.07011       1.898      0.8858  
+u_pea/gen_row_0__gen_col_4__u_pe
+                                   1.006      0.7288     0.06681       1.802      0.8407  
+u_pea/gen_row_0__gen_col_5__u_pe
+                                   1.004      0.7318     0.06473       1.801      0.8403  
+u_pea/gen_row_0__gen_col_6__u_pe
+                                  0.9255      0.6672     0.05992       1.653      0.7712  
+u_pea/gen_row_0__gen_col_7__u_pe
+                                   1.078      0.8002     0.06916       1.948      0.9089  
+u_pea/gen_row_0__gen_col_8__u_pe
+                                   1.001      0.7312     0.06603       1.798       0.839  
+u_pea/gen_row_0__gen_col_9__u_pe
+                                  0.9584      0.6832     0.06169       1.703      0.7948  
+u_pea/gen_row_0__gen_col_10__u_pe
+                                  0.9111      0.6542     0.05873       1.624      0.7578  
+u_pea/gen_row_0__gen_col_11__u_pe
+                                   1.003      0.7446     0.06553       1.813      0.8461  
+u_pea/gen_row_0__gen_col_12__u_pe
+                                   1.047      0.7748     0.07035       1.893      0.8831  
+u_pea/gen_row_0__gen_col_13__u_pe
+                                   1.078      0.7997     0.07321       1.951      0.9102  
+u_pea/gen_row_0__gen_col_14__u_pe
+                                  0.9794      0.7135     0.06469       1.758      0.8202  
+u_pea/gen_row_0__gen_col_15__u_pe
+                                   1.025      0.7453     0.06778       1.838      0.8577  
+u_pea/gen_row_1__gen_col_0__u_pe
+                                  0.9928       0.735     0.06495       1.793      0.8366  
+u_pea/gen_row_1__gen_col_1__u_pe
+                                  0.9896      0.7047     0.06536        1.76      0.8211  
+u_pea/gen_row_1__gen_col_2__u_pe
+                                  0.9461       0.674     0.05951        1.68      0.7838  
+u_pea/gen_row_1__gen_col_3__u_pe
+                                   1.077      0.7876     0.07171       1.936      0.9036  
+u_pea/gen_row_1__gen_col_4__u_pe
+                                   1.011      0.7263     0.06617       1.804      0.8418  
+u_pea/gen_row_1__gen_col_5__u_pe
+                                   1.035      0.7658     0.06665       1.868      0.8715  
+u_pea/gen_row_1__gen_col_6__u_pe
+                                   1.023      0.7283     0.06621       1.818      0.8482  
+u_pea/gen_row_1__gen_col_7__u_pe
+                                   1.001      0.7352      0.0638         1.8      0.8401  
+u_pea/gen_row_1__gen_col_8__u_pe
+                                   1.027      0.7392     0.06687       1.833      0.8555  
+u_pea/gen_row_1__gen_col_9__u_pe
+                                   1.021       0.757     0.06718       1.845      0.8609  
+u_pea/gen_row_1__gen_col_10__u_pe
+                                   1.034      0.7451     0.06777       1.847      0.8618  
+u_pea/gen_row_1__gen_col_11__u_pe
+                                  0.9595      0.7006     0.06378       1.724      0.8044  
+u_pea/gen_row_1__gen_col_12__u_pe
+                                   1.057      0.7814        0.07       1.909      0.8906  
+u_pea/gen_row_1__gen_col_13__u_pe
+                                   1.018       0.766     0.06729       1.851      0.8638  
+u_pea/gen_row_1__gen_col_14__u_pe
+                                  0.9833      0.7199     0.06443       1.768      0.8249  
+u_pea/gen_row_1__gen_col_15__u_pe
+                                  0.9923      0.7136     0.06645       1.772      0.8271  
+u_pea/gen_row_2__gen_col_0__u_pe
+                                   1.067      0.7763     0.07035       1.913      0.8928  
+u_pea/gen_row_2__gen_col_1__u_pe
+                                   1.038      0.7494     0.06808       1.855      0.8656  
+u_pea/gen_row_2__gen_col_2__u_pe
+                                  0.9892       0.715     0.06613        1.77      0.8261  
+u_pea/gen_row_2__gen_col_3__u_pe
+                                  0.9526      0.6754      0.0617        1.69      0.7885  
+u_pea/gen_row_2__gen_col_4__u_pe
+                                  0.9909      0.7161     0.06478       1.772      0.8268  
+u_pea/gen_row_2__gen_col_5__u_pe
+                                  0.9501      0.6794     0.06292       1.692      0.7898  
+u_pea/gen_row_2__gen_col_6__u_pe
+                                   1.113      0.8377     0.07271       2.023      0.9441  
+u_pea/gen_row_2__gen_col_7__u_pe
+                                  0.9285      0.6674     0.05878       1.655      0.7721  
+u_pea/gen_row_2__gen_col_8__u_pe
+                                  0.9887      0.7126     0.06456       1.766      0.8241  
+u_pea/gen_row_2__gen_col_9__u_pe
+                                   1.097      0.8134     0.07343       1.984      0.9256  
+u_pea/gen_row_2__gen_col_10__u_pe
+                                   1.071      0.8009     0.07015       1.942      0.9061  
+u_pea/gen_row_2__gen_col_11__u_pe
+                                  0.9708      0.7104     0.06274       1.744      0.8138  
+u_pea/gen_row_2__gen_col_12__u_pe
+                                  0.9469      0.6901     0.06026       1.697       0.792  
+u_pea/gen_row_2__gen_col_13__u_pe
+                                   1.028        0.77     0.06772       1.865      0.8705  
+u_pea/gen_row_2__gen_col_14__u_pe
+                                   1.028      0.7659     0.06718       1.861      0.8683  
+u_pea/gen_row_2__gen_col_15__u_pe
+                                    1.04      0.7625     0.06905       1.871      0.8733  
+u_pea/gen_row_3__gen_col_0__u_pe
+                                   1.067      0.7839     0.07138       1.922      0.8969  
+u_pea/gen_row_3__gen_col_1__u_pe
+                                  0.9841      0.7274      0.0636       1.775      0.8283  
+u_pea/gen_row_3__gen_col_2__u_pe
+                                  0.9903      0.7221     0.06497       1.777      0.8294  
+u_pea/gen_row_3__gen_col_3__u_pe
+                                   1.109      0.8121     0.07386       1.995      0.9307  
+u_pea/gen_row_3__gen_col_4__u_pe
+                                  0.9956      0.7268     0.06626       1.789      0.8347  
+u_pea/gen_row_3__gen_col_5__u_pe
+                                  0.9769      0.7083     0.06355       1.749      0.8161  
+u_pea/gen_row_3__gen_col_6__u_pe
+                                  0.9479      0.6899     0.06173       1.699      0.7931  
+u_pea/gen_row_3__gen_col_7__u_pe
+                                   1.123      0.8208      0.0771        2.02      0.9429  
+u_pea/gen_row_3__gen_col_8__u_pe
+                                  0.9442      0.6716     0.06124       1.677      0.7826  
+u_pea/gen_row_3__gen_col_9__u_pe
+                                   1.235      0.9139     0.08362       2.233       1.042  
+u_pea/gen_row_3__gen_col_10__u_pe
+                                   1.045      0.7687     0.06939       1.883      0.8787  
+u_pea/gen_row_3__gen_col_11__u_pe
+                                   1.027      0.7449     0.06826        1.84      0.8588  
+u_pea/gen_row_3__gen_col_12__u_pe
+                                   1.037      0.7487     0.06769       1.853      0.8649  
+u_pea/gen_row_3__gen_col_13__u_pe
+                                   1.047      0.7758     0.06901       1.892       0.883  
+u_pea/gen_row_3__gen_col_14__u_pe
+                                   1.017      0.7457     0.06715        1.83      0.8539  
+u_pea/gen_row_3__gen_col_15__u_pe
+                                   1.056      0.7763     0.07132       1.904      0.8885  
+u_pea/gen_quantizer_0__u_fixed_point_quantizer
+                                  0.3427      0.2671     0.04468      0.6545      0.3054  
+u_pea/gen_quantizer_1__u_fixed_point_quantizer
+                                   0.354      0.2744     0.04401      0.6725      0.3138  
+u_pea/gen_quantizer_2__u_fixed_point_quantizer
+                                  0.3758      0.2907     0.04542      0.7119      0.3322  
+u_pea/gen_quantizer_3__u_fixed_point_quantizer
+                                  0.3194      0.2456     0.04066      0.6057      0.2826  
+u_pea/gen_quantizer_4__u_fixed_point_quantizer
+                                  0.3677       0.289     0.04427      0.7009      0.3271  
+u_pea/gen_quantizer_5__u_fixed_point_quantizer
+                                  0.3811       0.309     0.04494      0.7351       0.343  
+u_pea/gen_quantizer_6__u_fixed_point_quantizer
+                                  0.3553       0.267     0.04344      0.6658      0.3107  
+u_pea/gen_quantizer_7__u_fixed_point_quantizer
+                                   0.382      0.2982     0.04464      0.7248      0.3382  
+u_pea/gen_quantizer_8__u_fixed_point_quantizer
+                                  0.3706      0.2907     0.04418      0.7055      0.3292  
+u_pea/gen_quantizer_9__u_fixed_point_quantizer
+                                  0.3584      0.2753     0.04538       0.679      0.3169  
+u_pea/gen_quantizer_10__u_fixed_point_quantizer
+                                  0.3424      0.2573     0.04089      0.6406      0.2989  
+u_pea/gen_quantizer_11__u_fixed_point_quantizer
+                                  0.4033      0.3311     0.04939      0.7838      0.3657  
+u_pea/gen_quantizer_12__u_fixed_point_quantizer
+                                  0.3659      0.2867     0.04363      0.6962      0.3249  
+u_pea/gen_quantizer_13__u_fixed_point_quantizer
+                                  0.3783      0.2939     0.04509      0.7173      0.3347  
+u_pea/gen_quantizer_14__u_fixed_point_quantizer
+                                  0.3664      0.2955     0.04356      0.7054      0.3292  
+u_pea/gen_quantizer_15__u_fixed_point_quantizer
+                                  0.3577      0.2781     0.04395      0.6798      0.3172  
+u_global_arbiter/clk_gate_axi_raddr_r_reg
+                                0.002196   0.0004182   4.094e-05    0.002655    0.001239  
+u_global_arbiter/clk_gate_network_input_width_o_reg
+                                0.001387   0.0001903   4.447e-05    0.001622   0.0007568  
+u_global_arbiter/clk_gate_max_IM_addr_o_reg
+                                0.001322    2.06e-05    5.33e-05    0.001395   0.0006512  
+u_controller/clk_gate_ctrl_IM_addr_r_reg
+                                0.001901   0.0009884   4.284e-05    0.002932    0.001368  
+u_controller/clk_gate_INPUT_WIDTH_r_reg
+                                0.002882    0.002313   5.202e-05    0.005247    0.002449  
+u_controller/clk_gate_SRC_FM_BASE_r_reg
+                                0.001529   9.916e-05   5.321e-05    0.001682   0.0007847  
+u_controller/clk_gate_exec_phase_r_reg
+                                0.002908   0.0007524   3.724e-05    0.003698    0.001726  
+u_controller/clk_gate_OUT_CH_counter_r_reg
+                                0.001828   0.0006075   4.335e-05    0.002479    0.001157  
+u_controller/clk_gate_ofmap_group_base_addr_r_reg
+                                0.001824   0.0006038   4.336e-05    0.002471    0.001153  
+u_controller/clk_gate_weight_group_base_addr_r_reg
+                                0.001632   0.0004023   4.408e-05    0.002079     0.00097  
+u_controller/clk_gate_OUTPUT_WIDTH_counter_r_reg
+                                0.001755   0.0001225   4.334e-05    0.001921   0.0008965  
+u_controller/clk_gate_bias_layer_base_r_reg
+                                  0.0018    0.000834   5.309e-05    0.002687    0.001254  
+u_controller/clk_gate_ifm_channel_base_addr_r_reg
+                                0.001849   0.0007453   4.334e-05    0.002638    0.001231  
+u_controller/clk_gate_IN_CH_counter_r_reg
+                                0.001856   0.0007498   4.333e-05    0.002649    0.001236  
+u_controller/clk_gate_KERNEL_counter_r_reg
+                                 0.00297   0.0009808   3.755e-05    0.003989    0.001861  
+u_controller/clk_gate_weight_in_ch_base_addr_r_reg
+                                0.001852   0.0007464   4.333e-05    0.002642    0.001233  
+u_ifm_arbiter/clk_gate_ifm_lane_valid_r_reg
+                                0.001424   0.0002069   5.326e-05    0.001684   0.0007859  
+u_line_buffer/clk_gate_pe_buffer_r_reg_0_
+                                0.008145    0.001367   0.0001425    0.009655    0.004505  
+u_line_buffer/clk_gate_line_buffer_r_reg_0_
+                                 0.00711    0.001192   0.0001427    0.008445    0.003941  
+u_pea/clk_gate_output_shift_r_reg
+                                0.005621   0.0007086   0.0001428    0.006473     0.00302  
+u_controller/DP_OP_80J190_133_942
+                               0.0002524   0.0001079   3.411e-05   0.0003944   0.0001841  
+u_controller/intadd_13145       0.004244    0.001653   0.0003254    0.006222    0.002904  
+u_controller/intadd_13149        0.00269    0.001792   0.0002322    0.004715      0.0022  
+u_controller/intadd_13152       0.001409   0.0007762   0.0001384    0.002324    0.001084  
+u_controller/intadd_13153       0.001419   0.0009342   0.0001384    0.002491    0.001163  
+u_instruction_memory/u_instruction_mem
+                                   1.485     0.01102     0.02183       1.518      0.7082  
+u_weight_memory/u_bank0            5.151    0.005838     0.07144       5.228        2.44  
+u_weight_memory/u_bank1            5.151    0.006174      0.0715       5.229        2.44  
+u_weight_memory/u_bank2            5.153     0.00664     0.07184       5.232       2.441  
+u_weight_memory/u_bank3            5.148    0.005569      0.0709       5.224       2.438  
+u_bias_memory/u_bank0             0.4292    0.009249     0.01018      0.4486      0.2093  
+u_bias_memory/u_bank1             0.4199    0.007285    0.008706      0.4359      0.2034  
+u_bias_memory/u_bank2             0.4071    0.004287    0.006639       0.418      0.1951  
+u_bias_memory/u_bank3             0.4045    0.003448    0.006213      0.4141      0.1933  
+u_ping_fmap_memory/gen_fm_bank_0__u_bank
+                                   1.372     0.01091     0.02178       1.405      0.6554  
+u_ping_fmap_memory/gen_fm_bank_1__u_bank
+                                    1.36    0.007153     0.02024       1.388      0.6476  
+u_ping_fmap_memory/gen_fm_bank_2__u_bank
+                                   1.373    0.008838     0.02212       1.404      0.6549  
+u_ping_fmap_memory/gen_fm_bank_3__u_bank
+                                   1.376     0.01163     0.02247        1.41      0.6578  
+u_ping_fmap_memory/gen_fm_bank_4__u_bank
+                                   1.372     0.01186     0.02214       1.406      0.6561  
+u_ping_fmap_memory/gen_fm_bank_5__u_bank
+                                   1.374     0.01297     0.02235       1.409      0.6577  
+u_ping_fmap_memory/gen_fm_bank_6__u_bank
+                                   1.364    0.009469     0.02073       1.394      0.6504  
+u_ping_fmap_memory/gen_fm_bank_7__u_bank
+                                   1.376     0.01193     0.02254        1.41      0.6582  
+u_ping_fmap_memory/gen_fm_bank_8__u_bank
+                                   1.377     0.01316     0.02258       1.412      0.6591  
+u_ping_fmap_memory/gen_fm_bank_9__u_bank
+                                   1.375     0.01333     0.02252       1.411      0.6583  
+u_ping_fmap_memory/gen_fm_bank_10__u_bank
+                                   1.397     0.02061     0.02613       1.444      0.6739  
+u_ping_fmap_memory/gen_fm_bank_11__u_bank
+                                   1.381     0.01599     0.02358       1.421      0.6631  
+u_ping_fmap_memory/gen_fm_bank_12__u_bank
+                                   1.384     0.01707     0.02417       1.425       0.665  
+u_ping_fmap_memory/gen_fm_bank_13__u_bank
+                                   1.376     0.01181      0.0226       1.411      0.6583  
+u_ping_fmap_memory/gen_fm_bank_14__u_bank
+                                   1.378     0.01367     0.02268       1.414      0.6598  
+u_ping_fmap_memory/gen_fm_bank_15__u_bank
+                                   1.383     0.01635     0.02396       1.423      0.6641  
+u_pong_fmap_memory/gen_fm_bank_0__u_bank
+                                   1.385     0.01846     0.02397       1.428      0.6662  
+u_pong_fmap_memory/gen_fm_bank_1__u_bank
+                                   1.385     0.02273     0.02416       1.431       0.668  
+u_pong_fmap_memory/gen_fm_bank_2__u_bank
+                                   1.376     0.01649      0.0223       1.415      0.6603  
+u_pong_fmap_memory/gen_fm_bank_3__u_bank
+                                    1.37     0.01159     0.02146       1.403      0.6545  
+u_pong_fmap_memory/gen_fm_bank_4__u_bank
+                                   1.362    0.008617     0.02064       1.391      0.6492  
+u_pong_fmap_memory/gen_fm_bank_5__u_bank
+                                   1.379     0.01393     0.02312       1.416      0.6608  
+u_pong_fmap_memory/gen_fm_bank_6__u_bank
+                                   1.377     0.01813     0.02284       1.418      0.6617  
+u_pong_fmap_memory/gen_fm_bank_7__u_bank
+                                   1.373     0.01368     0.02201       1.409      0.6574  
+u_pong_fmap_memory/gen_fm_bank_8__u_bank
+                                    1.37      0.0131     0.02173       1.405      0.6554  
+u_pong_fmap_memory/gen_fm_bank_9__u_bank
+                                   1.368     0.01164     0.02146       1.401       0.654  
+u_pong_fmap_memory/gen_fm_bank_10__u_bank
+                                   1.359     0.00796     0.01999       1.387      0.6472  
+u_pong_fmap_memory/gen_fm_bank_11__u_bank
+                                    1.38     0.01985     0.02355       1.424      0.6644  
+u_pong_fmap_memory/gen_fm_bank_12__u_bank
+                                   1.373     0.01328     0.02228       1.408      0.6571  
+u_pong_fmap_memory/gen_fm_bank_13__u_bank
+                                   1.365    0.009959     0.02104       1.396      0.6514  
+u_pong_fmap_memory/gen_fm_bank_14__u_bank
+                                   1.366     0.00891     0.02105       1.396      0.6514  
+u_pong_fmap_memory/gen_fm_bank_15__u_bank
+                                   1.362    0.007782     0.02045        1.39      0.6486  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier
+                                  0.5997      0.5371     0.03705       1.174      0.5478  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier
+                                  0.7321      0.6522     0.04828       1.433      0.6685  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier
+                                  0.6259      0.5719     0.03875       1.236       0.577  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier
+                                  0.7406      0.6568     0.04767       1.445      0.6744  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier
+                                  0.6811      0.6098     0.04406       1.335       0.623  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier
+                                  0.6813       0.616     0.04228        1.34      0.6251  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier
+                                  0.6054      0.5577     0.03786       1.201      0.5604  
+u_pea/gen_row_0__gen_col_7__u_pe/u_fixed_point_multiplier
+                                  0.7547      0.6805     0.04699       1.482      0.6917  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier
+                                  0.6818      0.6201     0.04388       1.346       0.628  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier
+                                  0.6427      0.5765     0.03953       1.259      0.5874  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier
+                                  0.5863      0.5297     0.03626       1.152      0.5377  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier
+                                  0.6812      0.6311      0.0434       1.356      0.6326  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier
+                                  0.7242      0.6598     0.04761       1.432      0.6681  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier
+                                  0.7525      0.6813      0.0501       1.484      0.6924  
+u_pea/gen_row_0__gen_col_14__u_pe/u_fixed_point_multiplier
+                                  0.6584      0.6028     0.04221       1.303      0.6082  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier
+                                   0.697      0.6258     0.04502       1.368      0.6383  
+u_pea/gen_row_1__gen_col_0__u_pe/u_fixed_point_multiplier
+                                  0.6683      0.6103     0.04271       1.321      0.6166  
+u_pea/gen_row_1__gen_col_1__u_pe/u_fixed_point_multiplier
+                                  0.6624      0.5846     0.04295        1.29       0.602  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier
+                                  0.6204      0.5576     0.03662       1.215      0.5668  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier
+                                  0.7466      0.6704     0.04842       1.465      0.6838  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier
+                                  0.6959      0.6216     0.04428       1.362      0.6355  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier
+                                  0.7143      0.6528     0.04428       1.411      0.6586  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier
+                                  0.6904       0.606     0.04302       1.339      0.6251  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier
+                                  0.6819      0.6199     0.04153       1.343      0.6269  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier
+                                  0.7042      0.6321      0.0446       1.381      0.6444  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier
+                                  0.6863      0.6221      0.0442       1.353      0.6312  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier
+                                  0.7034      0.6327     0.04467       1.381      0.6444  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier
+                                  0.6242       0.572     0.04023       1.236       0.577  
+u_pea/gen_row_1__gen_col_12__u_pe/u_fixed_point_multiplier
+                                  0.7266      0.6582     0.04666       1.431       0.668  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier
+                                  0.6917      0.6371     0.04451       1.373      0.6408  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier
+                                  0.6481      0.5894     0.04101       1.279      0.5966  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier
+                                  0.6748       0.606     0.04429       1.325      0.6183  
+u_pea/gen_row_2__gen_col_0__u_pe/u_fixed_point_multiplier
+                                  0.7473      0.6657     0.04861       1.462       0.682  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier
+                                  0.7167      0.6379     0.04558         1.4      0.6534  
+u_pea/gen_row_2__gen_col_2__u_pe/u_fixed_point_multiplier
+                                  0.6656      0.5976     0.04323       1.306      0.6096  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier
+                                  0.6369      0.5686     0.03965       1.245      0.5811  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier
+                                  0.6599      0.5987     0.04167         1.3      0.6068  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier
+                                  0.6286      0.5651     0.04012       1.234      0.5758  
+u_pea/gen_row_2__gen_col_6__u_pe/u_fixed_point_multiplier
+                                  0.7835      0.7159     0.04945       1.549      0.7228  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier
+                                  0.6066      0.5528     0.03585       1.195      0.5578  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier
+                                  0.6624       0.598     0.04156       1.302      0.6076  
+u_pea/gen_row_2__gen_col_9__u_pe/u_fixed_point_multiplier
+                                  0.7579      0.6881      0.0498       1.496       0.698  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier
+                                  0.7475       0.682     0.04763       1.477      0.6893  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier
+                                  0.6551      0.5997     0.04106       1.296      0.6047  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier
+                                  0.6286       0.573     0.03844        1.24      0.5786  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier
+                                  0.7074      0.6532      0.0456       1.406      0.6562  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier
+                                   0.702      0.6464     0.04408       1.392      0.6498  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier
+                                  0.7171      0.6496     0.04627       1.413      0.6593  
+u_pea/gen_row_3__gen_col_0__u_pe/u_fixed_point_multiplier
+                                  0.7399      0.6683     0.04824       1.456      0.6797  
+u_pea/gen_row_3__gen_col_1__u_pe/u_fixed_point_multiplier
+                                  0.6619       0.607     0.04103        1.31      0.6113  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier
+                                  0.6644      0.5996     0.04237       1.306      0.6096  
+u_pea/gen_row_3__gen_col_3__u_pe/u_fixed_point_multiplier
+                                  0.7808      0.6928     0.05054       1.524      0.7113  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier
+                                  0.6652      0.6074     0.04282       1.315      0.6138  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier
+                                  0.6469      0.5869     0.04009       1.274      0.5945  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier
+                                  0.6287      0.5774     0.03942       1.246      0.5812  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier
+                                  0.8041      0.7035     0.05484       1.562      0.7291  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier
+                                  0.6147      0.5531     0.03757       1.205      0.5625  
+u_pea/gen_row_3__gen_col_9__u_pe/u_fixed_point_multiplier
+                                  0.9163      0.8055      0.0612       1.783      0.8321  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier
+                                  0.7273      0.6584     0.04716       1.433      0.6686  
+u_pea/gen_row_3__gen_col_11__u_pe/u_fixed_point_multiplier
+                                  0.6953      0.6203     0.04506       1.361      0.6349  
+u_pea/gen_row_3__gen_col_12__u_pe/u_fixed_point_multiplier
+                                  0.7167      0.6369     0.04531       1.399      0.6528  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier
+                                  0.7221      0.6609     0.04619       1.429      0.6669  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier
+                                  0.6838      0.6175     0.04396       1.345      0.6278  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier
+                                    0.73      0.6639     0.04824       1.442      0.6729  
+u_pea/gen_row_0__gen_col_0__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001836   0.0002767   4.284e-05    0.002156    0.001006  
+u_pea/gen_row_0__gen_col_0__u_pe/clk_gate_accumulator_r_reg
+                                0.002261   0.0007378   4.094e-05     0.00304    0.001419  
+u_pea/gen_row_0__gen_col_1__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_0__gen_col_1__u_pe/clk_gate_accumulator_r_reg
+                                0.002257   0.0006465   4.094e-05    0.002945    0.001374  
+u_pea/gen_row_0__gen_col_2__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002018   0.0002902   5.282e-05    0.002361    0.001102  
+u_pea/gen_row_0__gen_col_2__u_pe/clk_gate_accumulator_r_reg
+                                0.002573   0.0005074   5.208e-05    0.003133    0.001462  
+u_pea/gen_row_0__gen_col_3__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001842   0.0002767   4.284e-05    0.002162    0.001009  
+u_pea/gen_row_0__gen_col_3__u_pe/clk_gate_accumulator_r_reg
+                                0.002234   0.0005074   4.094e-05    0.002782    0.001298  
+u_pea/gen_row_0__gen_col_4__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_0__gen_col_4__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001293  
+u_pea/gen_row_0__gen_col_5__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002012   0.0002767   5.282e-05    0.002341    0.001093  
+u_pea/gen_row_0__gen_col_5__u_pe/clk_gate_accumulator_r_reg
+                                 0.00223   0.0005074   4.094e-05    0.002778    0.001296  
+u_pea/gen_row_0__gen_col_6__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002007   0.0002767   5.282e-05    0.002336     0.00109  
+u_pea/gen_row_0__gen_col_6__u_pe/clk_gate_accumulator_r_reg
+                                 0.00374   0.0009683   8.363e-05    0.004792    0.002236  
+u_pea/gen_row_0__gen_col_7__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001986   0.0002143   5.282e-05    0.002253    0.001051  
+u_pea/gen_row_0__gen_col_7__u_pe/clk_gate_accumulator_r_reg
+                                0.002573   0.0005074   5.208e-05    0.003132    0.001462  
+u_pea/gen_row_0__gen_col_8__u_pe/clk_gate_acc_ofmap_o_reg
+                                 0.00184   0.0002767   4.284e-05     0.00216    0.001008  
+u_pea/gen_row_0__gen_col_8__u_pe/clk_gate_accumulator_r_reg
+                                0.002232   0.0005074   4.094e-05     0.00278    0.001297  
+u_pea/gen_row_0__gen_col_9__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001839   0.0002767   4.284e-05    0.002159    0.001007  
+u_pea/gen_row_0__gen_col_9__u_pe/clk_gate_accumulator_r_reg
+                                0.002231   0.0005074   4.094e-05    0.002779    0.001297  
+u_pea/gen_row_0__gen_col_10__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002006   0.0002767   5.282e-05    0.002335     0.00109  
+u_pea/gen_row_0__gen_col_10__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001294  
+u_pea/gen_row_0__gen_col_11__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002007   0.0002767   5.282e-05    0.002336     0.00109  
+u_pea/gen_row_0__gen_col_11__u_pe/clk_gate_accumulator_r_reg
+                                0.002192   0.0003928   4.094e-05    0.002626    0.001225  
+u_pea/gen_row_0__gen_col_12__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002012   0.0002767   5.282e-05    0.002342    0.001093  
+u_pea/gen_row_0__gen_col_12__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002775    0.001295  
+u_pea/gen_row_0__gen_col_13__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_0__gen_col_13__u_pe/clk_gate_accumulator_r_reg
+                                0.002577   0.0005074   5.208e-05    0.003136    0.001464  
+u_pea/gen_row_0__gen_col_14__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002008   0.0002767   5.282e-05    0.002338    0.001091  
+u_pea/gen_row_0__gen_col_14__u_pe/clk_gate_accumulator_r_reg
+                                0.002577   0.0005074   5.208e-05    0.003137    0.001464  
+u_pea/gen_row_0__gen_col_15__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001833   0.0002767   4.284e-05    0.002153    0.001004  
+u_pea/gen_row_0__gen_col_15__u_pe/clk_gate_accumulator_r_reg
+                                0.002223   0.0005074   4.094e-05    0.002771    0.001293  
+u_pea/gen_row_1__gen_col_0__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002043   0.0004025   5.282e-05    0.002499    0.001166  
+u_pea/gen_row_1__gen_col_0__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002776    0.001295  
+u_pea/gen_row_1__gen_col_1__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001816   0.0002143   4.284e-05    0.002073   0.0009674  
+u_pea/gen_row_1__gen_col_1__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002775    0.001295  
+u_pea/gen_row_1__gen_col_2__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001842   0.0002767   4.284e-05    0.002162    0.001009  
+u_pea/gen_row_1__gen_col_2__u_pe/clk_gate_accumulator_r_reg
+                                0.002258   0.0006465   4.094e-05    0.002946    0.001375  
+u_pea/gen_row_1__gen_col_3__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001842   0.0002767   4.284e-05    0.002162    0.001009  
+u_pea/gen_row_1__gen_col_3__u_pe/clk_gate_accumulator_r_reg
+                                0.002233   0.0005074   4.094e-05    0.002781    0.001298  
+u_pea/gen_row_1__gen_col_4__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002006   0.0002767   5.282e-05    0.002336     0.00109  
+u_pea/gen_row_1__gen_col_4__u_pe/clk_gate_accumulator_r_reg
+                                0.002223   0.0005074   4.094e-05    0.002772    0.001293  
+u_pea/gen_row_1__gen_col_5__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002012   0.0002767   5.282e-05    0.002341    0.001093  
+u_pea/gen_row_1__gen_col_5__u_pe/clk_gate_accumulator_r_reg
+                                0.002638   0.0007378   5.208e-05    0.003428      0.0016  
+u_pea/gen_row_1__gen_col_6__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002006   0.0002767   5.282e-05    0.002335     0.00109  
+u_pea/gen_row_1__gen_col_6__u_pe/clk_gate_accumulator_r_reg
+                                0.003585   0.0002783   8.363e-05    0.003946    0.001842  
+u_pea/gen_row_1__gen_col_7__u_pe/clk_gate_acc_ofmap_o_reg
+                                 0.00184   0.0002767   4.284e-05     0.00216    0.001008  
+u_pea/gen_row_1__gen_col_7__u_pe/clk_gate_accumulator_r_reg
+                                0.002587   0.0005074   5.208e-05    0.003146    0.001468  
+u_pea/gen_row_1__gen_col_8__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002007   0.0002767   5.282e-05    0.002337    0.001091  
+u_pea/gen_row_1__gen_col_8__u_pe/clk_gate_accumulator_r_reg
+                                0.002225   0.0005074   4.094e-05    0.002773    0.001294  
+u_pea/gen_row_1__gen_col_9__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001839   0.0002767   4.284e-05    0.002158    0.001007  
+u_pea/gen_row_1__gen_col_9__u_pe/clk_gate_accumulator_r_reg
+                                0.002231   0.0005074   4.094e-05    0.002779    0.001297  
+u_pea/gen_row_1__gen_col_10__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002005   0.0002767   5.282e-05    0.002334    0.001089  
+u_pea/gen_row_1__gen_col_10__u_pe/clk_gate_accumulator_r_reg
+                                0.005695   0.0002783   0.0001428    0.006117    0.002854  
+u_pea/gen_row_1__gen_col_11__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002005   0.0002641   5.282e-05    0.002322    0.001084  
+u_pea/gen_row_1__gen_col_11__u_pe/clk_gate_accumulator_r_reg
+                                0.003619   0.0005074   8.363e-05     0.00421    0.001965  
+u_pea/gen_row_1__gen_col_12__u_pe/clk_gate_acc_ofmap_o_reg
+                                 0.00201   0.0002767   5.282e-05    0.002339    0.001092  
+u_pea/gen_row_1__gen_col_12__u_pe/clk_gate_accumulator_r_reg
+                                0.002579   0.0005074   5.208e-05    0.003139    0.001465  
+u_pea/gen_row_1__gen_col_13__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_1__gen_col_13__u_pe/clk_gate_accumulator_r_reg
+                                0.002225   0.0005074   4.094e-05    0.002773    0.001294  
+u_pea/gen_row_1__gen_col_14__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002155    0.001005  
+u_pea/gen_row_1__gen_col_14__u_pe/clk_gate_accumulator_r_reg
+                                0.002581   0.0004842   5.208e-05    0.003118    0.001455  
+u_pea/gen_row_1__gen_col_15__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_1__gen_col_15__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001294  
+u_pea/gen_row_2__gen_col_0__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_2__gen_col_0__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001294  
+u_pea/gen_row_2__gen_col_1__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_2__gen_col_1__u_pe/clk_gate_accumulator_r_reg
+                                0.002223   0.0005074   4.094e-05    0.002771    0.001293  
+u_pea/gen_row_2__gen_col_2__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001843   0.0002767   4.284e-05    0.002162    0.001009  
+u_pea/gen_row_2__gen_col_2__u_pe/clk_gate_accumulator_r_reg
+                                0.002234   0.0005074   4.094e-05    0.002783    0.001299  
+u_pea/gen_row_2__gen_col_3__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001841   0.0002767   4.284e-05     0.00216    0.001008  
+u_pea/gen_row_2__gen_col_3__u_pe/clk_gate_accumulator_r_reg
+                                0.002233   0.0005074   4.094e-05    0.002781    0.001298  
+u_pea/gen_row_2__gen_col_4__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001833   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_2__gen_col_4__u_pe/clk_gate_accumulator_r_reg
+                                0.002674   0.0009469   5.208e-05    0.003673    0.001714  
+u_pea/gen_row_2__gen_col_5__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002007   0.0002767   5.282e-05    0.002337    0.001091  
+u_pea/gen_row_2__gen_col_5__u_pe/clk_gate_accumulator_r_reg
+                                0.002577   0.0005074   5.208e-05    0.003136    0.001464  
+u_pea/gen_row_2__gen_col_6__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001842   0.0002767   4.284e-05    0.002162    0.001009  
+u_pea/gen_row_2__gen_col_6__u_pe/clk_gate_accumulator_r_reg
+                                0.002589   0.0005074   5.208e-05    0.003149    0.001469  
+u_pea/gen_row_2__gen_col_7__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_2__gen_col_7__u_pe/clk_gate_accumulator_r_reg
+                                0.002225   0.0005074   4.094e-05    0.002773    0.001294  
+u_pea/gen_row_2__gen_col_8__u_pe/clk_gate_acc_ofmap_o_reg
+                                 0.00184   0.0002767   4.284e-05     0.00216    0.001008  
+u_pea/gen_row_2__gen_col_8__u_pe/clk_gate_accumulator_r_reg
+                                0.002622   0.0006465   5.208e-05    0.003321     0.00155  
+u_pea/gen_row_2__gen_col_9__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001839   0.0002767   4.284e-05    0.002158    0.001007  
+u_pea/gen_row_2__gen_col_9__u_pe/clk_gate_accumulator_r_reg
+                                0.003638    0.000532   8.363e-05    0.004254    0.001985  
+u_pea/gen_row_2__gen_col_10__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001833   0.0002767   4.284e-05    0.002152    0.001004  
+u_pea/gen_row_2__gen_col_10__u_pe/clk_gate_accumulator_r_reg
+                                0.002222   0.0005074   4.094e-05     0.00277    0.001293  
+u_pea/gen_row_2__gen_col_11__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002005   0.0002767   5.282e-05    0.002334    0.001089  
+u_pea/gen_row_2__gen_col_11__u_pe/clk_gate_accumulator_r_reg
+                                0.002574   0.0005074   5.208e-05    0.003133    0.001462  
+u_pea/gen_row_2__gen_col_12__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001836   0.0002767   4.284e-05    0.002156    0.001006  
+u_pea/gen_row_2__gen_col_12__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002775    0.001295  
+u_pea/gen_row_2__gen_col_13__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002008   0.0002767   5.282e-05    0.002338    0.001091  
+u_pea/gen_row_2__gen_col_13__u_pe/clk_gate_accumulator_r_reg
+                                0.002578   0.0005074   5.208e-05    0.003137    0.001464  
+u_pea/gen_row_2__gen_col_14__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002155    0.001006  
+u_pea/gen_row_2__gen_col_14__u_pe/clk_gate_accumulator_r_reg
+                                0.002163   0.0002783   4.094e-05    0.002482    0.001158  
+u_pea/gen_row_2__gen_col_15__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001844   0.0002767   4.284e-05    0.002164     0.00101  
+u_pea/gen_row_2__gen_col_15__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001294  
+u_pea/gen_row_3__gen_col_0__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001836   0.0002767   4.284e-05    0.002156    0.001006  
+u_pea/gen_row_3__gen_col_0__u_pe/clk_gate_accumulator_r_reg
+                                0.002224   0.0005074   4.094e-05    0.002772    0.001294  
+u_pea/gen_row_3__gen_col_1__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_3__gen_col_1__u_pe/clk_gate_accumulator_r_reg
+                                0.002223   0.0005074   4.094e-05    0.002771    0.001293  
+u_pea/gen_row_3__gen_col_2__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001837   0.0002767   4.284e-05    0.002156    0.001006  
+u_pea/gen_row_3__gen_col_2__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002776    0.001295  
+u_pea/gen_row_3__gen_col_3__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001842   0.0002767   4.284e-05    0.002161    0.001009  
+u_pea/gen_row_3__gen_col_3__u_pe/clk_gate_accumulator_r_reg
+                                0.002234   0.0005074   4.094e-05    0.002782    0.001298  
+u_pea/gen_row_3__gen_col_4__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001833   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_3__gen_col_4__u_pe/clk_gate_accumulator_r_reg
+                                0.002223   0.0005074   4.094e-05    0.002772    0.001293  
+u_pea/gen_row_3__gen_col_5__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001838   0.0002767   4.284e-05    0.002158    0.001007  
+u_pea/gen_row_3__gen_col_5__u_pe/clk_gate_accumulator_r_reg
+                                 0.00223   0.0005074   4.094e-05    0.002778    0.001296  
+u_pea/gen_row_3__gen_col_6__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002007   0.0002767   5.282e-05    0.002337     0.00109  
+u_pea/gen_row_3__gen_col_6__u_pe/clk_gate_accumulator_r_reg
+                                0.002576   0.0005074   5.208e-05    0.003135    0.001463  
+u_pea/gen_row_3__gen_col_7__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_3__gen_col_7__u_pe/clk_gate_accumulator_r_reg
+                                0.002225   0.0005074   4.094e-05    0.002773    0.001294  
+u_pea/gen_row_3__gen_col_8__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_3__gen_col_8__u_pe/clk_gate_accumulator_r_reg
+                                0.002225   0.0005074   4.094e-05    0.002773    0.001294  
+u_pea/gen_row_3__gen_col_9__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001839   0.0002767   4.284e-05    0.002158    0.001007  
+u_pea/gen_row_3__gen_col_9__u_pe/clk_gate_accumulator_r_reg
+                                0.002578   0.0005074   5.208e-05    0.003137    0.001464  
+u_pea/gen_row_3__gen_col_10__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002005   0.0002767   5.282e-05    0.002335     0.00109  
+u_pea/gen_row_3__gen_col_10__u_pe/clk_gate_accumulator_r_reg
+                                0.002575   0.0005074   5.208e-05    0.003135    0.001463  
+u_pea/gen_row_3__gen_col_11__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001834   0.0002767   4.284e-05    0.002154    0.001005  
+u_pea/gen_row_3__gen_col_11__u_pe/clk_gate_accumulator_r_reg
+                                0.002535   0.0003928   5.208e-05     0.00298    0.001391  
+u_pea/gen_row_3__gen_col_12__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001836   0.0002767   4.284e-05    0.002156    0.001006  
+u_pea/gen_row_3__gen_col_12__u_pe/clk_gate_accumulator_r_reg
+                                0.002227   0.0005074   4.094e-05    0.002775    0.001295  
+u_pea/gen_row_3__gen_col_13__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.002008   0.0002767   5.282e-05    0.002337    0.001091  
+u_pea/gen_row_3__gen_col_13__u_pe/clk_gate_accumulator_r_reg
+                                0.002578   0.0005074   5.208e-05    0.003137    0.001464  
+u_pea/gen_row_3__gen_col_14__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001835   0.0002767   4.284e-05    0.002155    0.001006  
+u_pea/gen_row_3__gen_col_14__u_pe/clk_gate_accumulator_r_reg
+                                0.002264   0.0007378   4.094e-05    0.003042     0.00142  
+u_pea/gen_row_3__gen_col_15__u_pe/clk_gate_acc_ofmap_o_reg
+                                0.001833   0.0002767   4.284e-05    0.002153    0.001005  
+u_pea/gen_row_3__gen_col_15__u_pe/clk_gate_accumulator_r_reg
+                                0.002154   0.0002783   4.094e-05    0.002474    0.001154  
+u_pea/gen_row_0__gen_col_8__u_pe/intadd_13162
+                               0.0004628   0.0002682   4.874e-05   0.0007797   0.0003639  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13219
+                                 0.00169    0.001147    9.51e-05    0.002932    0.001368  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13220
+                               0.0007148   0.0007091   4.686e-05    0.001471   0.0006863  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13221
+                               0.0007092   0.0006709   4.686e-05    0.001427   0.0006659  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13222
+                               0.0007111   0.0006551   4.693e-05    0.001413   0.0006594  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13223
+                               0.0006323   0.0006959   4.801e-05    0.001376   0.0006422  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13224
+                               0.0006328   0.0005295   4.693e-05    0.001209   0.0005643  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13228
+                                0.002275     0.00192   0.0001403    0.004335    0.002023  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13229
+                                0.001602    0.001564   9.216e-05    0.003259    0.001521  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13230
+                               0.0007165    0.000805   4.682e-05    0.001568   0.0007318  
+u_pea/gen_row_0__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13231
+                               0.0006965   0.0006956   4.706e-05    0.001439   0.0006716  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13236
+                                0.001664    0.001514    9.52e-05    0.003273    0.001527  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13237
+                                0.001587    0.001379    4.58e-05    0.003011    0.001405  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13245
+                                0.002354    0.001752   0.0001401    0.004246    0.001981  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13246
+                                0.003004    0.002346   0.0001388    0.005489    0.002562  
+u_pea/gen_row_0__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13247
+                                0.001787     0.00163   9.338e-05    0.003511    0.001638  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13253
+                               0.0009924   0.0007111   4.845e-05    0.001752   0.0008175  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13255
+                                0.000712   0.0007136   4.686e-05    0.001472   0.0006871  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13258
+                               0.0007092   0.0007061   4.693e-05    0.001462   0.0006823  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13259
+                               0.0006999   0.0004091   4.686e-05    0.001156   0.0005394  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13260
+                               0.0009901   0.0007053   4.811e-05    0.001744   0.0008136  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13262
+                               0.0005964    0.000515   4.669e-05    0.001158   0.0005404  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13263
+                                0.001499     0.00122   9.216e-05    0.002811    0.001312  
+u_pea/gen_row_0__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13264
+                               0.0007074    0.000565   4.682e-05    0.001319   0.0006156  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13270
+                               0.0007406   0.0007348   4.695e-05    0.001522   0.0007104  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13272
+                               0.0007351    0.000621   4.686e-05    0.001403   0.0006547  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13275
+                                0.001239     0.00105   4.837e-05    0.002337     0.00109  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13277
+                               0.0006519    0.000561    4.93e-05    0.001262    0.000589  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13279
+                                 0.00226     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13280
+                                0.002784    0.001923   0.0001386    0.004845    0.002261  
+u_pea/gen_row_0__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13281
+                                0.002804    0.002386   0.0001401     0.00533    0.002487  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13287
+                                0.003333    0.002635   0.0001403    0.006108     0.00285  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13290
+                               0.0007132   0.0007102   4.693e-05     0.00147   0.0006861  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13296
+                                0.002372    0.001644   0.0001403    0.004156     0.00194  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13297
+                                0.002681    0.001835   0.0001386    0.004655    0.002172  
+u_pea/gen_row_0__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13298
+                                0.002682    0.001841   0.0001401    0.004663    0.002176  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13304
+                                0.001629    0.001129   9.507e-05    0.002853    0.001331  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13305
+                                 0.00164    0.001329   9.379e-05    0.003063    0.001429  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13309
+                               0.0006608   0.0005249   4.681e-05    0.001233   0.0005752  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13313
+                                0.002671    0.001844   0.0001401    0.004655    0.002172  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13314
+                                0.003003    0.002494   0.0001387    0.005636     0.00263  
+u_pea/gen_row_0__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13315
+                                 0.00224    0.001768   9.339e-05    0.004102    0.001914  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13321
+                                0.002189    0.002324   9.186e-05    0.004605    0.002149  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13323
+                               0.0007121   0.0007078   4.686e-05    0.001467   0.0006845  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13324
+                               0.0007147   0.0007655   4.693e-05    0.001527   0.0007126  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13330
+                                0.002258    0.001546   0.0001403    0.003945    0.001841  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13331
+                                0.002802    0.002252    0.000139    0.005193    0.002423  
+u_pea/gen_row_0__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13332
+                               0.0007082   0.0006066   4.682e-05    0.001362   0.0006354  
+u_pea/gen_row_0__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13338
+                                0.001679    0.001606   9.533e-05    0.003381    0.001578  
+u_pea/gen_row_0__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13347
+                                0.001646    0.001417   9.319e-05    0.003156    0.001473  
+u_pea/gen_row_0__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13348
+                                0.001148    0.001134   4.662e-05    0.002329    0.001087  
+u_pea/gen_row_0__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13349
+                                0.001832    0.001477   9.183e-05    0.003401    0.001587  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13355
+                                0.002615    0.002455   9.353e-05    0.005164     0.00241  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13356
+                                0.003257    0.002763   0.0001388    0.006159    0.002874  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13357
+                               0.0006461   0.0007306   4.686e-05    0.001423   0.0006643  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13364
+                                0.002259    0.001565     0.00014    0.003965     0.00185  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13365
+                                0.002685    0.001923   0.0001385    0.004746    0.002215  
+u_pea/gen_row_0__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13366
+                                0.002021    0.001664   9.335e-05    0.003779    0.001763  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13372
+                                0.002265     0.00144    9.57e-05    0.003801    0.001774  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13373
+                                 0.00177    0.001369   9.319e-05    0.003232    0.001508  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13374
+                                0.000717   0.0008593   4.686e-05    0.001623   0.0007574  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13375
+                               0.0006396   0.0005501   4.693e-05    0.001237   0.0005771  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13377
+                               0.0007142   0.0007128   4.693e-05    0.001474   0.0006878  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13381
+                                0.002262    0.001635   0.0001403    0.004037    0.001884  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13382
+                                0.002696    0.002139   0.0001386    0.004974    0.002321  
+u_pea/gen_row_0__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13383
+                               0.0007003   0.0004197   4.682e-05    0.001167   0.0005445  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13389
+                                0.001671    0.001415   9.533e-05    0.003181    0.001485  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13390
+                               0.0006398   0.0005088   4.686e-05    0.001195   0.0005578  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13391
+                               0.0007539    0.001138   4.686e-05    0.001939   0.0009047  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13392
+                               0.0006263   0.0005404   4.693e-05    0.001214   0.0005663  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13397
+                                0.000746   0.0008429   4.844e-05    0.001637   0.0007641  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13398
+                                0.002258    0.001546   0.0001403    0.003945    0.001841  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13399
+                                0.002304    0.001837   9.273e-05    0.004234    0.001976  
+u_pea/gen_row_0__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13400
+                                0.000727   0.0004246   4.682e-05    0.001198   0.0005592  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13406
+                                0.001073   0.0009049   4.856e-05    0.002027   0.0009458  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13407
+                               0.0007164   0.0008092   4.686e-05    0.001572   0.0007338  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13415
+                                0.002258    0.001546   0.0001403    0.003944    0.001841  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13416
+                                0.002734    0.002137   0.0001386     0.00501    0.002338  
+u_pea/gen_row_0__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13417
+                               0.0007065   0.0005476   4.682e-05    0.001301   0.0006071  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13423
+                                0.002348    0.001863   9.553e-05    0.004307     0.00201  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13424
+                                0.001069    0.001485    4.58e-05      0.0026    0.001213  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13425
+                               0.0007117     0.00061   4.686e-05    0.001369   0.0006387  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13432
+                                0.002379    0.001778   0.0001403    0.004297    0.002005  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13433
+                                0.002572    0.001925   0.0001386    0.004635    0.002163  
+u_pea/gen_row_0__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13434
+                                0.002792    0.002018   0.0001401    0.004951     0.00231  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13440
+                                0.001052   0.0008386   4.845e-05    0.001939   0.0009049  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13441
+                               0.0007276   0.0004719   4.686e-05    0.001246   0.0005816  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13449
+                                0.002266    0.001693   0.0001403    0.004098    0.001913  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13450
+                                 0.00281     0.00214   0.0001386    0.005089    0.002375  
+u_pea/gen_row_0__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13451
+                                0.002804    0.002506   0.0001401     0.00545    0.002543  
+u_pea/gen_row_0__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13457
+                                0.001048   0.0008818   4.845e-05    0.001979   0.0009234  
+u_pea/gen_row_0__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13466
+                                0.002372    0.001644   0.0001403    0.004156    0.001939  
+u_pea/gen_row_0__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13467
+                                 0.00258    0.002138   0.0001386    0.004856    0.002266  
+u_pea/gen_row_0__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13468
+                                0.002033    0.001569   9.353e-05    0.003695    0.001724  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13474
+                                0.001905    0.001448   9.648e-05     0.00345     0.00161  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13476
+                               0.0007054   0.0005615   4.686e-05    0.001314    0.000613  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13477
+                               0.0006405   0.0005972   4.693e-05    0.001285   0.0005995  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13479
+                               0.0009889   0.0009902   4.841e-05    0.002028   0.0009461  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13483
+                                0.001643    0.001346   9.319e-05    0.003082    0.001438  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13484
+                                0.002705    0.002473   0.0001378    0.005316    0.002481  
+u_pea/gen_row_0__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13485
+                                0.002041    0.001899   9.353e-05    0.004034    0.001882  
+u_pea/gen_row_1__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13491
+                                0.002201      0.0019   9.316e-05    0.004194    0.001957  
+u_pea/gen_row_1__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13500
+                                 0.00226     0.00159   0.0001403    0.003991    0.001862  
+u_pea/gen_row_1__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13501
+                                0.002744    0.001898   0.0001386    0.004781    0.002231  
+u_pea/gen_row_1__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13502
+                                0.002762    0.002324   0.0001401    0.005226    0.002439  
+u_pea/gen_row_1__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13513
+                               0.0007082   0.0006067   4.693e-05    0.001362   0.0006355  
+u_pea/gen_row_1__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13517
+                                0.002379    0.001779   0.0001403    0.004298    0.002005  
+u_pea/gen_row_1__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13518
+                                0.002819    0.001951   0.0001386    0.004909    0.002291  
+u_pea/gen_row_1__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13519
+                                 0.00282    0.001998   0.0001401    0.004958    0.002314  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13525
+                                0.000711   0.0006072   4.695e-05    0.001365   0.0006371  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13528
+                               0.0007189   0.0006631   4.693e-05    0.001429   0.0006668  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13530
+                               0.0007123   0.0007052   4.693e-05    0.001464   0.0006834  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13531
+                                0.000757     0.00065   4.686e-05    0.001454   0.0006784  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13532
+                               0.0006372   0.0006229    4.93e-05    0.001309    0.000611  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13533
+                               0.0008306   0.0006817   5.099e-05    0.001563   0.0007295  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13534
+                                0.002385    0.001935     0.00014    0.004459    0.002081  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13535
+                                0.002936     0.00235   0.0001389    0.005425    0.002532  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13536
+                               0.0007068   0.0006066   4.665e-05     0.00136   0.0006347  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13537
+                                0.001717    0.001577   9.535e-05    0.003389    0.001581  
+u_pea/gen_row_1__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13540
+                               0.0008212    0.000462   4.325e-05    0.001326    0.000619  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13542
+                                0.001179   0.0006883   4.717e-05    0.001915   0.0008934  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13543
+                                0.001051    0.001195    4.58e-05    0.002292    0.001069  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13551
+                                0.002265    0.001698   0.0001403    0.004104    0.001915  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13552
+                                0.002682    0.001854   0.0001386    0.004675    0.002181  
+u_pea/gen_row_1__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13553
+                                0.002686     0.00191   0.0001401    0.004736     0.00221  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13559
+                               0.0008508   0.0006713   4.799e-05     0.00157   0.0007327  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13560
+                               0.0007395   0.0007325   4.686e-05    0.001519   0.0007088  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13561
+                               0.0008455   0.0006076    4.79e-05    0.001501   0.0007004  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13568
+                                0.002259     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13569
+                                0.002867    0.001996   0.0001391    0.005002    0.002334  
+u_pea/gen_row_1__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13570
+                                0.002968    0.002409   0.0001401    0.005517    0.002574  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13576
+                                0.001098    0.001243   4.853e-05     0.00239    0.001115  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13579
+                               0.0007135   0.0007079   4.693e-05    0.001468   0.0006852  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13585
+                                0.002259    0.001565   0.0001403    0.003965     0.00185  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13586
+                                0.002797    0.002214   0.0001386    0.005149    0.002403  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13587
+                                0.002076    0.001411   9.353e-05     0.00358    0.001671  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13588
+                                0.000641   0.0005467   4.706e-05    0.001235   0.0005762  
+u_pea/gen_row_1__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13575
+                               0.0008117   0.0003716   5.073e-05    0.001234   0.0005759  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13593
+                                0.003036    0.002723   0.0001415      0.0059    0.002753  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13594
+                                0.000713   0.0006691   4.686e-05    0.001429   0.0006668  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13595
+                               0.0007056   0.0005074   4.686e-05     0.00126   0.0005879  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13602
+                                 0.00226     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13603
+                                0.002732    0.001664   0.0001386    0.004534    0.002116  
+u_pea/gen_row_1__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13604
+                                0.002756    0.002108   0.0001401    0.005004    0.002335  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13610
+                                0.001083    0.000773   4.854e-05    0.001904   0.0008885  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13615
+                               0.0008339   0.0007173   4.795e-05    0.001599   0.0007463  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13619
+                                 0.00238    0.001809   0.0001403    0.004329     0.00202  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13620
+                                0.002697    0.002177   0.0001386    0.005013    0.002339  
+u_pea/gen_row_1__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13621
+                                0.002026    0.001516   9.353e-05    0.003636    0.001697  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13627
+                                0.001029    0.001399   4.844e-05    0.002476    0.001155  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13629
+                                0.000743   0.0008473   4.686e-05    0.001637    0.000764  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13630
+                               0.0006386   0.0005388   4.693e-05    0.001224   0.0005713  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13632
+                               0.0007459   0.0009168   4.693e-05     0.00171   0.0007978  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13636
+                                 0.00226    0.001565   0.0001403    0.003966    0.001851  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13637
+                                0.002792    0.002108   0.0001386    0.005039    0.002351  
+u_pea/gen_row_1__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13638
+                                  0.0019    0.001613   9.368e-05    0.003607    0.001683  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13644
+                                0.000933   0.0009172   4.838e-05    0.001899    0.000886  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13645
+                               0.0007077   0.0006039   4.686e-05    0.001358   0.0006339  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13646
+                               0.0008005   0.0008943    4.68e-05    0.001742   0.0008127  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13647
+                               0.0006352   0.0004519   4.693e-05    0.001134   0.0005292  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13653
+                                0.002354    0.001758   0.0001401    0.004252    0.001984  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13654
+                                0.003009    0.002406   0.0001388    0.005553    0.002591  
+u_pea/gen_row_1__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13655
+                               0.0008182    0.001024    4.76e-05     0.00189   0.0008819  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13662
+                                0.001375    0.001011   4.669e-05    0.002434    0.001136  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13663
+                               0.0007185   0.0009074   4.686e-05    0.001673   0.0007806  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13666
+                               0.0007113   0.0006591   4.693e-05    0.001417   0.0006614  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13670
+                                0.002268    0.001774   0.0001403    0.004183    0.001952  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13671
+                                 0.00222     0.00202   9.273e-05    0.004332    0.002021  
+u_pea/gen_row_1__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13672
+                               0.0007114   0.0007037   4.682e-05    0.001462   0.0006822  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13678
+                               0.0009745   0.0009592   4.845e-05    0.001982    0.000925  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13681
+                               0.0007081   0.0006078   4.693e-05    0.001363    0.000636  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13687
+                                0.002272    0.001856   0.0001403    0.004268    0.001992  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13688
+                                0.002706    0.002491   0.0001386    0.005336     0.00249  
+u_pea/gen_row_1__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13689
+                                0.001338    0.001157   4.676e-05    0.002542    0.001186  
+u_pea/gen_row_1__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13695
+                                0.002582    0.002183   9.465e-05     0.00486    0.002268  
+u_pea/gen_row_1__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13696
+                                0.002992    0.002402   0.0001395    0.005533    0.002582  
+u_pea/gen_row_1__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13704
+                                  0.0006   0.0005903   4.669e-05    0.001237   0.0005773  
+u_pea/gen_row_1__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13706
+                                0.001792    0.001188   9.182e-05    0.003072    0.001434  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13712
+                                0.001007    0.001116   4.844e-05    0.002172    0.001013  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13714
+                               0.0007427   0.0008521   4.686e-05    0.001642   0.0007661  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13721
+                                 0.00226     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13722
+                                0.002677    0.001738   0.0001386    0.004553    0.002125  
+u_pea/gen_row_1__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13723
+                                0.001828    0.001514   9.353e-05    0.003435    0.001603  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13729
+                                0.001055   0.0008968   4.845e-05       0.002   0.0009333  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13730
+                               0.0006423   0.0006383   4.686e-05    0.001327   0.0006195  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13731
+                                0.000695   0.0003477   4.686e-05     0.00109   0.0005085  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13738
+                                0.002258     0.00154   0.0001403    0.003939    0.001838  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13739
+                                0.001956    0.001792    9.26e-05     0.00384    0.001792  
+u_pea/gen_row_1__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_13740
+                               0.0006954   0.0003077   4.682e-05     0.00105   0.0004899  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13746
+                                 0.00232    0.001943   9.553e-05    0.004359    0.002034  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13748
+                               0.0007198   0.0009049   4.686e-05    0.001672     0.00078  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13755
+                                0.002271    0.001862   0.0001403    0.004274    0.001994  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13756
+                                0.001827    0.001811    9.26e-05     0.00373    0.001741  
+u_pea/gen_row_1__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_13757
+                               0.0006948   0.0003213   4.682e-05    0.001063    0.000496  
+u_pea/gen_row_2__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13763
+                                0.001615    0.001129   9.533e-05     0.00284    0.001325  
+u_pea/gen_row_2__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13772
+                                0.002699    0.002008   0.0001403    0.004847    0.002262  
+u_pea/gen_row_2__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13773
+                                0.003055    0.002284   0.0001396    0.005479    0.002557  
+u_pea/gen_row_2__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_13774
+                                 0.00298    0.002596     0.00014    0.005717    0.002668  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13780
+                               0.0007048   0.0005278   4.695e-05     0.00128   0.0005971  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13783
+                                0.000646   0.0007252   4.693e-05    0.001418   0.0006617  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13789
+                                 0.00226    0.001578   0.0001403    0.003978    0.001856  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13790
+                                0.001495    0.001162   9.216e-05    0.002749    0.001283  
+u_pea/gen_row_2__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_13791
+                               0.0007089    0.000664   4.682e-05     0.00142   0.0006625  
+u_pea/gen_row_2__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13806
+                                0.002258    0.001552   0.0001403     0.00395    0.001843  
+u_pea/gen_row_2__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13807
+                                0.002683     0.00189   0.0001386    0.004712    0.002199  
+u_pea/gen_row_2__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_13808
+                               0.0006926   0.0002626   4.682e-05    0.001002   0.0004676  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13814
+                                0.001633    0.001131   9.533e-05    0.002859    0.001334  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13815
+                                0.002187    0.001532   9.328e-05    0.003812    0.001779  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13816
+                               0.0007089   0.0006047   4.686e-05     0.00136   0.0006348  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13822
+                               0.0007136   0.0007022   4.844e-05    0.001464   0.0006833  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13823
+                                0.002386    0.001942   0.0001403    0.004468    0.002085  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13824
+                                0.001579    0.001028   9.216e-05    0.002698    0.001259  
+u_pea/gen_row_2__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_13825
+                               0.0007021   0.0004602   4.682e-05    0.001209   0.0005642  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13831
+                                0.003686    0.002958   0.0001406    0.006784    0.003166  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13832
+                               0.0007169   0.0008072   4.686e-05    0.001571   0.0007331  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13833
+                               0.0007083   0.0006038   4.686e-05    0.001359   0.0006341  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13836
+                               0.0007439   0.0006283   4.693e-05    0.001419   0.0006623  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13840
+                                0.002265    0.001693   0.0001403    0.004098    0.001912  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13841
+                                0.002855    0.002061   0.0001386    0.005055    0.002359  
+u_pea/gen_row_2__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_13842
+                                0.002088    0.001801   9.353e-05    0.003982    0.001858  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13848
+                               0.0007305   0.0005252   4.695e-05    0.001303   0.0006079  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13849
+                                0.000735   0.0006321   4.686e-05    0.001414   0.0006598  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13851
+                               0.0007027   0.0004599   4.698e-05     0.00121   0.0005645  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13852
+                               0.0007088   0.0006066   4.801e-05    0.001363   0.0006362  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13857
+                                0.002276    0.001958   0.0001403    0.004374    0.002041  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13858
+                                0.001502    0.001257   9.216e-05    0.002851     0.00133  
+u_pea/gen_row_2__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_13859
+                               0.0007197    0.000901   4.682e-05    0.001668   0.0007782  
+u_pea/gen_row_2__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13865
+                               0.0006317   0.0003316   4.695e-05     0.00101   0.0004714  
+u_pea/gen_row_2__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13874
+                                 0.00226    0.001552   0.0001403    0.003952    0.001844  
+u_pea/gen_row_2__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_13875
+                                0.002921    0.001978   0.0001391    0.005038    0.002351  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13882
+                                0.002737    0.002425    9.33e-05    0.005255    0.002452  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13883
+                                0.001735    0.001546   9.256e-05    0.003374    0.001575  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13884
+                               0.0007875   0.0005671    4.68e-05    0.001401   0.0006539  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13885
+                                0.000709   0.0006038   4.678e-05     0.00136   0.0006344  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13891
+                                0.002372    0.001511   0.0001399    0.004023    0.001877  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13892
+                                0.002338    0.001873   9.287e-05    0.004304    0.002009  
+u_pea/gen_row_2__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_13893
+                               0.0007998   0.0008987   4.676e-05    0.001745   0.0008144  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13899
+                                0.003049    0.002415   0.0001415    0.005606    0.002616  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13900
+                               0.0007093   0.0006089   4.686e-05    0.001365    0.000637  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13901
+                               0.0007049   0.0005074   4.686e-05    0.001259   0.0005876  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13908
+                                0.002384    0.001917   0.0001403    0.004441    0.002072  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13909
+                                0.002686    0.001944   0.0001386    0.004768    0.002225  
+u_pea/gen_row_2__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_13910
+                                0.002693    0.002128   0.0001401    0.004961    0.002315  
+u_pea/gen_row_2__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13916
+                                0.001568   0.0007358   9.507e-05    0.002399    0.001119  
+u_pea/gen_row_2__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13925
+                                 0.00226     0.00156   0.0001401     0.00396    0.001848  
+u_pea/gen_row_2__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13926
+                                0.002691    0.002037   0.0001385    0.004866    0.002271  
+u_pea/gen_row_2__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_13927
+                                0.002036    0.001706   9.353e-05    0.003835     0.00179  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13935
+                                0.000739   0.0007348   4.686e-05    0.001521   0.0007096  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13938
+                               0.0006527   0.0009164   4.693e-05    0.001616   0.0007541  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13942
+                                 0.00226    0.001565   0.0001403    0.003965     0.00185  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13943
+                                0.002699    0.002278   0.0001386    0.005115    0.002387  
+u_pea/gen_row_2__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_13944
+                                0.002035    0.001719   9.353e-05    0.003848    0.001795  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13950
+                                0.004226     0.00329   0.0001871    0.007702    0.003594  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13954
+                               0.0007362   0.0006212   4.801e-05    0.001405   0.0006558  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13959
+                                0.002259     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13960
+                                 0.00228    0.001715   9.273e-05    0.004087    0.001907  
+u_pea/gen_row_2__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_13961
+                                0.002094    0.001897   9.342e-05    0.004084    0.001906  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13967
+                               0.0007372   0.0006303   4.695e-05    0.001414   0.0006601  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13968
+                                0.000705   0.0005103   4.686e-05    0.001262    0.000589  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13976
+                                0.002259     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13977
+                                0.003031    0.002558   0.0001396    0.005729    0.002673  
+u_pea/gen_row_2__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_13978
+                                0.003005    0.002766     0.00014    0.005911    0.002758  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13984
+                                0.001907     0.00201   9.637e-05    0.004013    0.001873  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13985
+                               0.0006611    0.000699   4.686e-05    0.001407   0.0006566  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13993
+                                0.002258    0.001546   0.0001401    0.003944    0.001841  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13994
+                                0.002031    0.001751   9.264e-05    0.003875    0.001808  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13995
+                               0.0007381   0.0006989   4.682e-05    0.001484   0.0006924  
+u_pea/gen_row_2__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_13983
+                               0.0007383   0.0003169   5.065e-05    0.001106   0.0005161  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14001
+                                 0.00085   0.0007296   4.799e-05    0.001628   0.0007595  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14002
+                               0.0007384   0.0007267   4.686e-05    0.001512   0.0007056  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14003
+                               0.0007353   0.0006521   4.686e-05    0.001434   0.0006693  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14006
+                                 0.00104   0.0009971    4.88e-05    0.002085   0.0009731  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14010
+                                0.002379    0.001792   0.0001403    0.004311    0.002012  
+u_pea/gen_row_2__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14011
+                                0.001593     0.00134   9.216e-05    0.003026    0.001412  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14018
+                                0.002616    0.002403   9.459e-05    0.005113    0.002386  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14019
+                                0.002631    0.001838   9.307e-05    0.004562    0.002129  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14024
+                               0.0006642   0.0005635    4.68e-05    0.001275   0.0005948  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14027
+                                0.002356    0.001798   0.0001401    0.004295    0.002004  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14028
+                                   0.003    0.002243   0.0001388    0.005382    0.002511  
+u_pea/gen_row_2__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14029
+                                0.002993    0.001955     0.00014    0.005088    0.002375  
+u_pea/gen_row_3__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_14044
+                                0.002271    0.001826   0.0001403    0.004237    0.001977  
+u_pea/gen_row_3__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_14045
+                                0.002689    0.002011   0.0001386    0.004839    0.002258  
+u_pea/gen_row_3__gen_col_0__u_pe/u_fixed_point_multiplier/intadd_14046
+                                0.002681     0.00181   0.0001401    0.004632    0.002161  
+u_pea/gen_row_3__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_14052
+                                0.002321      0.0021   9.224e-05    0.004513    0.002106  
+u_pea/gen_row_3__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_14055
+                                0.000732   0.0005267   4.692e-05    0.001306   0.0006093  
+u_pea/gen_row_3__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_14061
+                                0.002277    0.001945   0.0001403    0.004363    0.002036  
+u_pea/gen_row_3__gen_col_1__u_pe/u_fixed_point_multiplier/intadd_14062
+                                0.001647    0.001258   9.216e-05    0.002998    0.001399  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14071
+                               0.0007426   0.0007909   4.686e-05     0.00158   0.0007374  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14072
+                               0.0006375   0.0005116   4.693e-05    0.001196   0.0005581  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14074
+                               0.0007309   0.0005294   4.693e-05    0.001307     0.00061  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14078
+                                0.002378    0.001801   0.0001403    0.004319    0.002016  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14079
+                                0.001344    0.001159   4.668e-05     0.00255     0.00119  
+u_pea/gen_row_3__gen_col_2__u_pe/u_fixed_point_multiplier/intadd_14080
+                               0.0007355    0.000594   4.682e-05    0.001376   0.0006422  
+u_pea/gen_row_3__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_14086
+                                0.000998    0.001061   4.845e-05    0.002107   0.0009833  
+u_pea/gen_row_3__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_14095
+                                0.002276    0.001942   0.0001403    0.004359    0.002034  
+u_pea/gen_row_3__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_14096
+                                0.001602    0.001572   9.216e-05    0.003266    0.001524  
+u_pea/gen_row_3__gen_col_3__u_pe/u_fixed_point_multiplier/intadd_14097
+                                0.001343    0.001214   4.676e-05    0.002604    0.001215  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14103
+                                0.002665    0.002615   9.368e-05    0.005374    0.002508  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14104
+                               0.0007074   0.0006039   4.686e-05    0.001358   0.0006338  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14105
+                                0.000708    0.000609   4.686e-05    0.001364   0.0006364  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14110
+                               0.0006285   0.0003985    4.93e-05    0.001076   0.0005023  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14112
+                                0.002261    0.001606   0.0001403    0.004007     0.00187  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14113
+                                0.002858    0.002159   0.0001386    0.005156    0.002406  
+u_pea/gen_row_3__gen_col_4__u_pe/u_fixed_point_multiplier/intadd_14114
+                                0.001413    0.001184   4.676e-05    0.002643    0.001233  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_14121
+                               0.0007157    0.000715   4.686e-05    0.001478   0.0006895  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_14122
+                                0.001678    0.001813   9.264e-05    0.003584    0.001672  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_14129
+                                0.002261    0.001616   0.0001403    0.004017    0.001875  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_14130
+                                0.002044    0.001907   9.265e-05    0.004044    0.001887  
+u_pea/gen_row_3__gen_col_5__u_pe/u_fixed_point_multiplier/intadd_14131
+                               0.0007266   0.0004216   4.682e-05    0.001195   0.0005576  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14137
+                                0.001636    0.001468    9.52e-05    0.003199    0.001493  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14138
+                               0.0007135   0.0007134   4.686e-05    0.001474   0.0006877  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14139
+                               0.0007955   0.0007478    4.68e-05     0.00159    0.000742  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14140
+                                0.000639   0.0005444   4.693e-05     0.00123   0.0005741  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14146
+                                0.002354    0.001767   0.0001401    0.004261    0.001988  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14147
+                                0.002994    0.002068   0.0001388    0.005201    0.002427  
+u_pea/gen_row_3__gen_col_6__u_pe/u_fixed_point_multiplier/intadd_14148
+                                0.002328    0.001677   9.338e-05    0.004099    0.001913  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_14154
+                                0.002398    0.002035   9.587e-05    0.004529    0.002113  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_14155
+                                0.001754    0.001498   9.276e-05    0.003345    0.001561  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_14163
+                                0.002261     0.00159   0.0001401    0.003991    0.001863  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_14164
+                                0.002688     0.00194   0.0001385    0.004766    0.002224  
+u_pea/gen_row_3__gen_col_7__u_pe/u_fixed_point_multiplier/intadd_14165
+                                0.002017    0.001346   9.353e-05    0.003457    0.001613  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14171
+                                0.001051   0.0008905   4.845e-05     0.00199   0.0009285  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14173
+                               0.0007044   0.0005046   4.686e-05    0.001256   0.0005861  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14174
+                               0.0007168   0.0008329   4.693e-05    0.001597   0.0007451  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14180
+                                 0.00226     0.00156   0.0001403     0.00396    0.001848  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14181
+                                0.002704    0.002334   0.0001386    0.005177    0.002416  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14182
+                                0.001845    0.001889   9.353e-05    0.003827    0.001786  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14186
+                               0.0008372   0.0005715   4.325e-05    0.001452   0.0006775  
+u_pea/gen_row_3__gen_col_8__u_pe/u_fixed_point_multiplier/intadd_14170
+                               0.0006652   0.0002334   5.073e-05   0.0009494    0.000443  
+u_pea/gen_row_3__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_14197
+                                0.002374    0.001687   0.0001403    0.004201     0.00196  
+u_pea/gen_row_3__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_14198
+                                0.002794    0.002133   0.0001386    0.005066    0.002364  
+u_pea/gen_row_3__gen_col_9__u_pe/u_fixed_point_multiplier/intadd_14199
+                                0.001389    0.001165   4.676e-05    0.002601    0.001214  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_14205
+                                0.001102    0.001012   4.845e-05    0.002162    0.001009  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_14206
+                                0.001114    0.001105   4.623e-05    0.002265    0.001057  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_14214
+                                 0.00226     0.00159   0.0001403    0.003991    0.001862  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_14215
+                                0.002688    0.001958   0.0001386    0.004784    0.002232  
+u_pea/gen_row_3__gen_col_10__u_pe/u_fixed_point_multiplier/intadd_14216
+                                0.002695    0.002108   0.0001401    0.004943    0.002307  
+u_pea/gen_row_3__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_14222
+                                0.001982    0.001424   9.407e-05      0.0035    0.001633  
+u_pea/gen_row_3__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_14231
+                                0.002271    0.001826   0.0001403    0.004236    0.001977  
+u_pea/gen_row_3__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_14232
+                                0.002805    0.002455   0.0001386    0.005399    0.002519  
+u_pea/gen_row_3__gen_col_11__u_pe/u_fixed_point_multiplier/intadd_14233
+                                  0.0028    0.002336   0.0001401    0.005276    0.002462  
+u_pea/gen_row_3__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_14239
+                                0.002309    0.001709   9.541e-05    0.004114     0.00192  
+u_pea/gen_row_3__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_14248
+                                 0.00227    0.001826     0.00014    0.004236    0.001977  
+u_pea/gen_row_3__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_14249
+                                0.002695    0.002131   0.0001385    0.004965    0.002317  
+u_pea/gen_row_3__gen_col_12__u_pe/u_fixed_point_multiplier/intadd_14250
+                                0.002032    0.001628   9.335e-05    0.003753    0.001751  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_14256
+                                0.001009   0.0005857   4.845e-05    0.001643   0.0007665  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_14257
+                               0.0007088   0.0006087   4.686e-05    0.001364   0.0006367  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_14265
+                                0.002378    0.001801   0.0001403    0.004319    0.002016  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_14266
+                                0.001821    0.001679    9.26e-05    0.003592    0.001676  
+u_pea/gen_row_3__gen_col_13__u_pe/u_fixed_point_multiplier/intadd_14267
+                               0.0007083   0.0006066   4.682e-05    0.001362   0.0006354  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14273
+                                0.001558    0.001561   4.499e-05    0.003164    0.001476  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14274
+                               0.0007162   0.0008115   4.686e-05    0.001575   0.0007348  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14282
+                                0.002265    0.001715   0.0001403    0.004121    0.001923  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14283
+                                0.001307    0.001169   4.662e-05    0.002523    0.001177  
+u_pea/gen_row_3__gen_col_14__u_pe/u_fixed_point_multiplier/intadd_14284
+                               0.0007193   0.0009077   4.682e-05    0.001674    0.000781  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14290
+                                0.001009   0.0009468   4.845e-05    0.002004   0.0009351  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14291
+                                0.001075    0.001196   4.623e-05    0.002317    0.001081  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14299
+                                0.002259    0.001565   0.0001403    0.003965     0.00185  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14300
+                                0.002753    0.002065   0.0001386    0.004956    0.002313  
+u_pea/gen_row_3__gen_col_15__u_pe/u_fixed_point_multiplier/intadd_14301
+                                0.001971     0.00184   9.353e-05    0.003904    0.001822  
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power: u_weight_memory/u_bank2/gen_asic_memory_gen_sram_16x4096_u_sram (SRAM_16x4096_1rw):            5.193 
+*                Highest Leakage Power: u_weight_memory/u_bank0/gen_asic_memory_gen_sram_16x4096_u_sram (SRAM_16x4096_1rw):          0.06777 
+*          Total Cap:      1.06957e-09 F
+*          Total instances in design: 259764
+*          Total instances in design with no power:   152
+*          Total instances in design with no activity:   152
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

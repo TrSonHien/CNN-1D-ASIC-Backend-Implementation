@@ -61,8 +61,7 @@ rpt/
 The root-level `input_data/`, `output/` and `rpt/` now contain **AMICA data**,
 replacing the former baseline folders. The redundant `AMICA_R2_C16_ASIC/`
 wrapper has been removed. Previous folder contents remain recoverable in Git
-history. The legacy baseline `SAVED/`, older report and existing images are
-retained separately; `SAVED/` is **not** an AMICA checkpoint directory.
+history. The older report and existing images are retained separately.
 
 ## AMICA inputs and outputs
 

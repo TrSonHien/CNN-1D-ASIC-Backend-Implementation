@@ -1,0 +1,401 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-29 19:03:42 (2026-Oct-29 12:03:42 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: AMICA_R2_C16_ASIC
+*
+*	Liberty Libraries used: 
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/stdcells-wc.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_4x2048_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_16x1024_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_16x4096_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_16x256_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_16x512_1rw_SS_1p0V_25C.lib
+*	        func_view_setup: /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/SAVED/00_init_design_init.invs.dat/libs/mmmc/SRAM_16x16_1rw_SS_1p0V_25C.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:       0.95 
+*
+*       Power View : func_view_setup
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/rpt/04_CTS_opt/analysis/post_setup_20261029_190326_132163_1793275406395309/post_setup_power.rpt -hierarchy all
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:       97.03431605 	   67.0928%
+Total Switching Power:      42.69646513 	   29.5218%
+Total Leakage Power:         4.89626269 	    3.3854%
+Total Power:               144.62704388 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         19.97         2.9       1.193       24.06       16.64 
+Macro                              50.84       0.248      0.7706       51.86       35.86 
+IO                                     0           0           0           0           0 
+Combinational                      23.81       31.86       2.889       58.56       40.49 
+Clock (Combinational)              2.413       7.688     0.04425       10.14       7.014 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                              97.03        42.7       4.896       144.6         100 
+-----------------------------------------------------------------------------------------
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk_sys                            2.413       7.688     0.04425       10.14       7.014 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)       2.413       7.688     0.04425       10.14       7.014 
+-----------------------------------------------------------------------------------------
+Clock: clk_sys
+Clock Period: 0.004000 usec 
+Clock Toggle Rate:   500.0000 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                      0.95      97.03        42.7       4.896       144.6         100 
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:       97.03431605 	   67.0928%
+Total Switching Power:      42.69646513 	   29.5218%
+Total Leakage Power:         4.89626269 	    3.3854%
+Total Power:               144.62704388 
+-----------------------------------------------------------------------------------------
+
+
+Hierarchy                       Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+u_core                                97       42.59       4.888       144.5        99.9  
+u_core/u_bias_memory               2.325     0.06351     0.04586       2.434       1.683  
+u_core/u_controller                2.209        1.57      0.2542       4.033       2.788  
+u_core/u_global_arbiter           0.1496      0.3038     0.02811      0.4815      0.3329  
+u_core/u_line_buffer               1.334       1.031      0.1354         2.5       1.729  
+u_core/u_partial_sum_memory
+                                   2.344       1.035      0.1938       3.573        2.47  
+u_core/u_instruction_memory
+                                   1.508      0.2301     0.04192        1.78       1.231  
+u_core/u_descriptor_memory
+                                   2.879       0.246     0.07066       3.195       2.209  
+u_core/u_tile_scheduler         0.006753    0.001169   0.0008431    0.008766    0.006061  
+u_core/u_ifm_arbiter             0.05109     0.09294    0.007144      0.1512      0.1045  
+u_core/u_ping_fmap_memory          20.55       3.291      0.5953       24.44        16.9  
+u_core/u_global_average_pool1d
+                                   2.082       1.817      0.2391       4.137       2.861  
+u_core/u_pong_fmap_memory          20.09       2.447      0.5304       23.07       15.95  
+u_core/u_maxpool1d                0.3804      0.1929     0.03906      0.6124      0.4234  
+u_core/u_dfp_relu_output_stage
+                                   4.202       3.994      0.4394       8.635        5.97  
+u_core/u_weight_memory             8.641      0.0753       0.148       8.864       6.129  
+u_core/u_pea                       25.81       20.26       1.912       47.98       33.18  
+u_core/u_writeback_rotator
+                                  0.2796      0.3093     0.03528      0.6241      0.4315  
+u_core/u_bias_memory/g_mem_0__u_ram
+                                   1.157     0.01725     0.02231       1.196      0.8273  
+u_core/u_bias_memory/g_mem_1__u_ram
+                                   1.153      0.0201      0.0215       1.195       0.826  
+u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram
+                                  0.2867      0.1417     0.01324      0.4416      0.3053  
+u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram
+                                  0.2873      0.1212     0.01139      0.4199      0.2903  
+u_core/u_instruction_memory/u_instruction_mem
+                                   1.488      0.1585     0.03962       1.686       1.166  
+u_core/u_descriptor_memory/u_extension_bram
+                                   1.445      0.1043      0.0351       1.584       1.096  
+u_core/u_descriptor_memory/u_memory_base_bram
+                                   1.414     0.05903     0.03316       1.506       1.041  
+u_core/u_ping_fmap_memory/gen_fm_bank_0__u_bank
+                                   1.443      0.4838     0.04344       1.971       1.362  
+u_core/u_ping_fmap_memory/gen_fm_bank_1__u_bank
+                                   1.282      0.2104     0.03966       1.532        1.06  
+u_core/u_ping_fmap_memory/gen_fm_bank_2__u_bank
+                                   1.258      0.1555     0.03455       1.448       1.001  
+u_core/u_ping_fmap_memory/gen_fm_bank_3__u_bank
+                                   1.254      0.1349      0.0339       1.423      0.9838  
+u_core/u_ping_fmap_memory/gen_fm_bank_4__u_bank
+                                   1.274      0.1995     0.03828       1.512       1.045  
+u_core/u_ping_fmap_memory/gen_fm_bank_5__u_bank
+                                   1.265      0.1757     0.03698       1.478       1.022  
+u_core/u_ping_fmap_memory/gen_fm_bank_6__u_bank
+                                   1.247      0.1337     0.03302       1.413      0.9772  
+u_core/u_ping_fmap_memory/gen_fm_bank_7__u_bank
+                                    1.23     0.09836     0.03025       1.359      0.9396  
+u_core/u_ping_fmap_memory/gen_fm_bank_8__u_bank
+                                   1.266      0.1801     0.03656       1.483       1.025  
+u_core/u_ping_fmap_memory/gen_fm_bank_9__u_bank
+                                    1.26      0.1462     0.03575       1.442      0.9968  
+u_core/u_ping_fmap_memory/gen_fm_bank_10__u_bank
+                                   1.237      0.1102     0.03151       1.379      0.9533  
+u_core/u_ping_fmap_memory/gen_fm_bank_11__u_bank
+                                   1.222      0.0853     0.02919       1.337      0.9242  
+u_core/u_ping_fmap_memory/gen_fm_bank_12__u_bank
+                                   1.261      0.1653      0.0364       1.462       1.011  
+u_core/u_ping_fmap_memory/gen_fm_bank_13__u_bank
+                                   1.257      0.1329     0.03504       1.425      0.9856  
+u_core/u_ping_fmap_memory/gen_fm_bank_14__u_bank
+                                   1.233      0.0936     0.03075       1.357      0.9386  
+u_core/u_ping_fmap_memory/gen_fm_bank_15__u_bank
+                                   1.254      0.1336     0.03481       1.422      0.9836  
+u_core/u_pong_fmap_memory/gen_fm_bank_0__u_bank
+                                   1.375      0.3918     0.03731       1.804       1.247  
+u_core/u_pong_fmap_memory/gen_fm_bank_1__u_bank
+                                   1.234      0.1555     0.03159       1.421      0.9827  
+u_core/u_pong_fmap_memory/gen_fm_bank_2__u_bank
+                                   1.233      0.1311     0.03034       1.395      0.9643  
+u_core/u_pong_fmap_memory/gen_fm_bank_3__u_bank
+                                   1.236      0.1217     0.03127       1.389      0.9607  
+u_core/u_pong_fmap_memory/gen_fm_bank_4__u_bank
+                                   1.252      0.1615     0.03418       1.448       1.001  
+u_core/u_pong_fmap_memory/gen_fm_bank_5__u_bank
+                                   1.221      0.1182      0.0293       1.368       0.946  
+u_core/u_pong_fmap_memory/gen_fm_bank_6__u_bank
+                                   1.225      0.1019     0.02953       1.356      0.9378  
+u_core/u_pong_fmap_memory/gen_fm_bank_7__u_bank
+                                   1.219      0.0897     0.02884       1.338       0.925  
+u_core/u_pong_fmap_memory/gen_fm_bank_8__u_bank
+                                   1.244      0.1385     0.03238       1.415      0.9782  
+u_core/u_pong_fmap_memory/gen_fm_bank_9__u_bank
+                                   1.211     0.09783     0.02792       1.337      0.9244  
+u_core/u_pong_fmap_memory/gen_fm_bank_10__u_bank
+                                   1.207      0.0779     0.02731       1.312       0.907  
+u_core/u_pong_fmap_memory/gen_fm_bank_11__u_bank
+                                   1.213     0.07647     0.02789       1.317      0.9109  
+u_core/u_pong_fmap_memory/gen_fm_bank_12__u_bank
+                                   1.275      0.1589     0.03706       1.471       1.017  
+u_core/u_pong_fmap_memory/gen_fm_bank_13__u_bank
+                                   1.278      0.1806     0.03795       1.496       1.035  
+u_core/u_pong_fmap_memory/gen_fm_bank_14__u_bank
+                                   1.232     0.08578     0.03015       1.348      0.9319  
+u_core/u_pong_fmap_memory/gen_fm_bank_15__u_bank
+                                   1.236      0.1194     0.03184       1.387      0.9592  
+u_core/u_dfp_relu_output_stage/g_quantizer_0__u_quantizer
+                                  0.2477      0.2227     0.02423      0.4946       0.342  
+u_core/u_dfp_relu_output_stage/g_quantizer_1__u_quantizer
+                                  0.2493      0.2319     0.02566      0.5068      0.3504  
+u_core/u_dfp_relu_output_stage/g_quantizer_2__u_quantizer
+                                  0.2547      0.2332     0.02659      0.5145      0.3557  
+u_core/u_dfp_relu_output_stage/g_quantizer_3__u_quantizer
+                                  0.2518      0.2452     0.02644      0.5234      0.3619  
+u_core/u_dfp_relu_output_stage/g_quantizer_4__u_quantizer
+                                  0.2588      0.2599     0.02707      0.5458      0.3774  
+u_core/u_dfp_relu_output_stage/g_quantizer_5__u_quantizer
+                                  0.2698      0.2808     0.02879      0.5794      0.4006  
+u_core/u_dfp_relu_output_stage/g_quantizer_6__u_quantizer
+                                   0.259      0.2436     0.02724      0.5298      0.3663  
+u_core/u_dfp_relu_output_stage/g_quantizer_7__u_quantizer
+                                  0.2638      0.2492     0.02843      0.5415      0.3744  
+u_core/u_dfp_relu_output_stage/g_quantizer_8__u_quantizer
+                                   0.262      0.2383     0.02724      0.5275      0.3647  
+u_core/u_dfp_relu_output_stage/g_quantizer_9__u_quantizer
+                                  0.2559      0.2238     0.02657      0.5063      0.3501  
+u_core/u_dfp_relu_output_stage/g_quantizer_10__u_quantizer
+                                  0.2398      0.2089     0.02452      0.4731      0.3271  
+u_core/u_dfp_relu_output_stage/g_quantizer_11__u_quantizer
+                                  0.2423      0.2148     0.02503      0.4821      0.3334  
+u_core/u_dfp_relu_output_stage/g_quantizer_12__u_quantizer
+                                  0.2578       0.227     0.02768      0.5125      0.3543  
+u_core/u_dfp_relu_output_stage/g_quantizer_13__u_quantizer
+                                  0.2567      0.2267     0.02669      0.5101      0.3527  
+u_core/u_dfp_relu_output_stage/g_quantizer_14__u_quantizer
+                                  0.2427      0.2119     0.02475      0.4794      0.3315  
+u_core/u_dfp_relu_output_stage/g_quantizer_15__u_quantizer
+                                  0.2511      0.2281     0.02587      0.5051      0.3492  
+u_core/u_weight_memory/g_mem_0__u_ram
+                                   4.315     0.04205     0.07279        4.43       3.063  
+u_core/u_weight_memory/g_mem_1__u_ram
+                                   4.324     0.03239     0.07499       4.431       3.064  
+u_core/u_pea/g_row_0__g_col_0__u_pe
+                                   0.591      0.4265     0.04348       1.061      0.7336  
+u_core/u_pea/g_row_0__g_col_1__u_pe
+                                  0.6045      0.4392     0.04523       1.089      0.7529  
+u_core/u_pea/g_row_0__g_col_2__u_pe
+                                  0.6043      0.4416      0.0454       1.091      0.7546  
+u_core/u_pea/g_row_0__g_col_3__u_pe
+                                  0.6005      0.4364     0.04525       1.082      0.7482  
+u_core/u_pea/g_row_0__g_col_4__u_pe
+                                  0.6238      0.4906     0.04821       1.163      0.8039  
+u_core/u_pea/g_row_0__g_col_5__u_pe
+                                  0.6185      0.5177     0.04774       1.184      0.8186  
+u_core/u_pea/g_row_0__g_col_6__u_pe
+                                  0.6301      0.5442     0.04884       1.223      0.8457  
+u_core/u_pea/g_row_0__g_col_7__u_pe
+                                  0.6296      0.5411     0.04869       1.219      0.8432  
+u_core/u_pea/g_row_0__g_col_8__u_pe
+                                  0.6211      0.4874     0.04746       1.156      0.7992  
+u_core/u_pea/g_row_0__g_col_9__u_pe
+                                  0.6211      0.4764     0.04712       1.145      0.7914  
+u_core/u_pea/g_row_0__g_col_10__u_pe
+                                   0.622      0.4836     0.04775       1.153      0.7974  
+u_core/u_pea/g_row_0__g_col_11__u_pe
+                                  0.6414      0.5116     0.04906       1.202      0.8312  
+u_core/u_pea/g_row_0__g_col_12__u_pe
+                                    0.65      0.5665     0.04918       1.266      0.8751  
+u_core/u_pea/g_row_0__g_col_13__u_pe
+                                  0.6319      0.4707     0.04823       1.151      0.7957  
+u_core/u_pea/g_row_0__g_col_14__u_pe
+                                  0.6233      0.4946     0.04766       1.166      0.8059  
+u_core/u_pea/g_row_0__g_col_15__u_pe
+                                  0.6179      0.4707     0.04681       1.135      0.7851  
+u_core/u_pea/g_row_1__g_col_0__u_pe
+                                  0.5696      0.4166     0.04278       1.029      0.7115  
+u_core/u_pea/g_row_1__g_col_1__u_pe
+                                  0.5871      0.4196     0.04439       1.051      0.7268  
+u_core/u_pea/g_row_1__g_col_2__u_pe
+                                   0.591      0.4239     0.04455       1.059      0.7326  
+u_core/u_pea/g_row_1__g_col_3__u_pe
+                                   0.593      0.4251     0.04532       1.063      0.7353  
+u_core/u_pea/g_row_1__g_col_4__u_pe
+                                  0.5986      0.4423     0.04494       1.086      0.7508  
+u_core/u_pea/g_row_1__g_col_5__u_pe
+                                  0.5841      0.4327     0.04382       1.061      0.7334  
+u_core/u_pea/g_row_1__g_col_6__u_pe
+                                  0.6113      0.4826     0.04534       1.139      0.7877  
+u_core/u_pea/g_row_1__g_col_7__u_pe
+                                  0.6056       0.465      0.0457       1.116      0.7718  
+u_core/u_pea/g_row_1__g_col_8__u_pe
+                                  0.5998      0.4667     0.04514       1.112      0.7686  
+u_core/u_pea/g_row_1__g_col_9__u_pe
+                                  0.6104      0.4725     0.04637       1.129      0.7808  
+u_core/u_pea/g_row_1__g_col_10__u_pe
+                                  0.6143      0.5014     0.04679       1.162      0.8038  
+u_core/u_pea/g_row_1__g_col_11__u_pe
+                                  0.6109       0.478     0.04629       1.135      0.7849  
+u_core/u_pea/g_row_1__g_col_12__u_pe
+                                  0.6053      0.4775     0.04596       1.129      0.7805  
+u_core/u_pea/g_row_1__g_col_13__u_pe
+                                  0.6052      0.4678     0.04607       1.119      0.7737  
+u_core/u_pea/g_row_1__g_col_14__u_pe
+                                  0.6068       0.486     0.04592       1.139      0.7874  
+u_core/u_pea/g_row_1__g_col_15__u_pe
+                                  0.5957      0.4532     0.04519       1.094      0.7564  
+u_core/u_bias_memory/g_mem_0__u_ram/u_hard_sram
+                                   1.125    0.002198     0.01872       1.146      0.7922  
+u_core/u_bias_memory/g_mem_1__u_ram/u_hard_sram
+                                   1.121    0.001169     0.01796        1.14      0.7884  
+u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram
+                                  0.2087     0.04916     0.00647      0.2643      0.1827  
+u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram
+                                  0.2066     0.03707    0.004696      0.2484      0.1717  
+u_core/u_instruction_memory/u_instruction_mem/u_hard_sram
+                                   1.371     0.03459     0.02887       1.435      0.9922  
+u_core/u_descriptor_memory/u_extension_bram/u_hard_sram
+                                   1.364     0.02869     0.02753        1.42      0.9821  
+u_core/u_descriptor_memory/u_memory_base_bram/u_hard_sram
+                                   1.371     0.02766     0.02898       1.427      0.9868  
+u_core/u_ping_fmap_memory/gen_fm_bank_0__u_bank/u_hard_sram
+                                   1.269      0.2684      0.0295       1.567       1.083  
+u_core/u_ping_fmap_memory/gen_fm_bank_1__u_bank/u_hard_sram
+                                   1.156     0.07448     0.02373       1.254      0.8674  
+u_core/u_ping_fmap_memory/gen_fm_bank_2__u_bank/u_hard_sram
+                                   1.153     0.05095     0.02246       1.226       0.848  
+u_core/u_ping_fmap_memory/gen_fm_bank_3__u_bank/u_hard_sram
+                                   1.137     0.02951     0.02029       1.186      0.8204  
+u_core/u_ping_fmap_memory/gen_fm_bank_4__u_bank/u_hard_sram
+                                   1.173     0.09718     0.02636       1.296      0.8962  
+u_core/u_ping_fmap_memory/gen_fm_bank_5__u_bank/u_hard_sram
+                                   1.153     0.05851     0.02315       1.235      0.8538  
+u_core/u_ping_fmap_memory/gen_fm_bank_6__u_bank/u_hard_sram
+                                   1.135     0.02693     0.02011       1.182      0.8173  
+u_core/u_ping_fmap_memory/gen_fm_bank_7__u_bank/u_hard_sram
+                                   1.117      0.0112      0.0173       1.146       0.792  
+u_core/u_ping_fmap_memory/gen_fm_bank_8__u_bank/u_hard_sram
+                                   1.154       0.069     0.02366       1.247      0.8621  
+u_core/u_ping_fmap_memory/gen_fm_bank_9__u_bank/u_hard_sram
+                                   1.156     0.05927     0.02385       1.239      0.8566  
+u_core/u_ping_fmap_memory/gen_fm_bank_10__u_bank/u_hard_sram
+                                   1.138     0.03016     0.02042       1.189      0.8218  
+u_core/u_ping_fmap_memory/gen_fm_bank_11__u_bank/u_hard_sram
+                                   1.128      0.0156     0.01901       1.163       0.804  
+u_core/u_ping_fmap_memory/gen_fm_bank_12__u_bank/u_hard_sram
+                                   1.149     0.06252     0.02323       1.234      0.8536  
+u_core/u_ping_fmap_memory/gen_fm_bank_13__u_bank/u_hard_sram
+                                   1.146     0.04267     0.02195       1.211       0.837  
+u_core/u_ping_fmap_memory/gen_fm_bank_14__u_bank/u_hard_sram
+                                   1.119     0.00331     0.01748        1.14      0.7879  
+u_core/u_ping_fmap_memory/gen_fm_bank_15__u_bank/u_hard_sram
+                                   1.139     0.02781     0.02065       1.187      0.8208  
+u_core/u_pong_fmap_memory/gen_fm_bank_0__u_bank/u_hard_sram
+                                   1.195      0.1404     0.02317       1.358      0.9391  
+u_core/u_pong_fmap_memory/gen_fm_bank_1__u_bank/u_hard_sram
+                                   1.134     0.03689      0.0198       1.191      0.8236  
+u_core/u_pong_fmap_memory/gen_fm_bank_2__u_bank/u_hard_sram
+                                   1.127      0.0225     0.01852       1.168      0.8077  
+u_core/u_pong_fmap_memory/gen_fm_bank_3__u_bank/u_hard_sram
+                                   1.131     0.02282     0.01917       1.173      0.8111  
+u_core/u_pong_fmap_memory/gen_fm_bank_4__u_bank/u_hard_sram
+                                   1.145     0.04831     0.02194       1.215        0.84  
+u_core/u_pong_fmap_memory/gen_fm_bank_5__u_bank/u_hard_sram
+                                   1.124     0.02097     0.01816       1.164      0.8045  
+u_core/u_pong_fmap_memory/gen_fm_bank_6__u_bank/u_hard_sram
+                                   1.132     0.02047     0.01907       1.171      0.8098  
+u_core/u_pong_fmap_memory/gen_fm_bank_7__u_bank/u_hard_sram
+                                   1.127      0.0157     0.01854       1.162      0.8031  
+u_core/u_pong_fmap_memory/gen_fm_bank_8__u_bank/u_hard_sram
+                                   1.139      0.0443      0.0203       1.203       0.832  
+u_core/u_pong_fmap_memory/gen_fm_bank_9__u_bank/u_hard_sram
+                                   1.122     0.01154     0.01778       1.151      0.7959  
+u_core/u_pong_fmap_memory/gen_fm_bank_10__u_bank/u_hard_sram
+                                   1.125    0.009563     0.01815       1.153      0.7972  
+u_core/u_pong_fmap_memory/gen_fm_bank_11__u_bank/u_hard_sram
+                                   1.135     0.01415     0.01945       1.168      0.8079  
+u_core/u_pong_fmap_memory/gen_fm_bank_12__u_bank/u_hard_sram
+                                   1.154     0.04229     0.02303        1.22      0.8433  
+u_core/u_pong_fmap_memory/gen_fm_bank_13__u_bank/u_hard_sram
+                                   1.156     0.05531     0.02334       1.235      0.8539  
+u_core/u_pong_fmap_memory/gen_fm_bank_14__u_bank/u_hard_sram
+                                   1.121    0.005344     0.01772       1.144      0.7909  
+u_core/u_pong_fmap_memory/gen_fm_bank_15__u_bank/u_hard_sram
+                                   1.134     0.01645     0.01974        1.17      0.8092  
+u_core/u_weight_memory/g_mem_0__u_ram/u_hard_sram
+                                   4.277     0.00139     0.06875       4.347       3.006  
+u_core/u_weight_memory/g_mem_1__u_ram/u_hard_sram
+                                   4.284    0.003377     0.07016       4.357       3.013  
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power: u_core/u_weight_memory/g_mem_0__u_ram/u_hard_sram/g_weight_16x4096_u_sram (SRAM_16x4096_1rw):             4.34 
+*                Highest Leakage Power: u_core/u_weight_memory/g_mem_0__u_ram/u_hard_sram/g_weight_16x4096_u_sram (SRAM_16x4096_1rw):          0.06777 
+*          Total Cap:      1.12467e-09 F
+*          Total instances in design: 140427
+*          Total instances in design with no power:     2
+*          Total instances in design with no activity:     2
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

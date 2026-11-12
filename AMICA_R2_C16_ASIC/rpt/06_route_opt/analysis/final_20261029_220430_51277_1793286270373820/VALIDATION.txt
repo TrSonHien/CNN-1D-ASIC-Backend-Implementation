@@ -1,0 +1,3 @@
+raw_signoff_result=1
+validated_detailed_reports=2
+validated_views=func_view_setup func_view_hold

@@ -1,0 +1,7 @@
+*info: running library checker ... with 8 cpus
+
+
+*info: total 135 cells checked.
+[check_library] saving report file "check_library.rpt" ... 
+[check_library] saving pin-access report file "check_library.rpt.pa" ... 
+[CPU] check_library (cpu=0:00:00.6, real=0:00:01.0, mem=2660.9MB) @(0:00:29.5 - 0:00:30.1).

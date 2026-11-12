@@ -1,0 +1,7 @@
+setup_views=func_view_setup
+hold_views=func_view_hold
+active_views=func_view_setup func_view_hold
+constraint_modes=func_mode
+clocks=clk_sys clk_sys
+time_unit=1.000000ns
+capacitance_unit=1.000000pf

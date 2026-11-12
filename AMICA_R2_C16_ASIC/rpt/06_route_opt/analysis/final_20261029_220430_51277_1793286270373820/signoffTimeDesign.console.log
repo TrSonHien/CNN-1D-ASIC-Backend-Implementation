@@ -1,0 +1,87 @@
+*info: Tempus executable from /home/centos/cadence/installs/SSV221/bin
+
+*info: Starting servers to calculate signoff timing ... : (mem=6399.9M)
+
+<CMD> set ::enc_save_binary_timing_constraints 1
+<CMD> set enc_save_portable_design 1
+<CMD> set enc_save_portable_oa_design 1
+<CMD> getMultiCpuUsage -cpuPerRemoteHost
+<CMD> getMultiCpuUsage -cpuPerRemoteHost
+<CMD> set distributed_asynchronous_method 1
+<CMD> set ::quick_view_processing 1
+<CMD> set distributed_asynchronous_method 1
+Started resource monitoring for client processes; see ./host-monitor.log1 for details.
+2 more Tempus_Timing_Signoff_L 22.1 license (total 2 copies) checkout succeeded.
+[22:05:16.469171] Periodic Lic check successful
+[22:05:16.469187] Feature usage summary:
+[22:05:16.469192] Innovus_Impl_System
+[22:05:16.469193] Tempus_Timing_Signoff_L
+[22:05:16.469193] Innovus_CPU_Opt
+
+EDP: start server on localhost.localdomain:43472
+/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/work
+/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/work
+innovus 47> Connected to localhost.localdomain 42576 0 ( PID=85925 ). Wait time was 18 seconds
+Connected to localhost.localdomain 48289 1 ( PID=85969 ). Wait time was 18 seconds
+Refer to client logfile '/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/rpt/06_route_opt/analysis/final_20261029_220430_51277_1793286270373820/tempus/.seco.51277.220511.out/51277_d01505a7-79d1-489e-b640-c553ee34006b_0.log' for client initialization.
+ASYNC DV START ************************************
+Refer to client logfile '/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/rpt/06_route_opt/analysis/final_20261029_220430_51277_1793286270373820/tempus/.seco.51277.220511.out/51277_d01505a7-79d1-489e-b640-c553ee34006b_1.log' for client initialization.
+Batch mode processing for view/jobset 'func_view_hold' finished successfully. Refer to client logfile '/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/rpt/06_route_opt/analysis/final_20261029_220430_51277_1793286270373820/tempus/.seco.51277.220511.out/51277_d01505a7-79d1-489e-b640-c553ee34006b_1.log' for details. Number of views/jobsets remaining for further analysis is '1'.
+Batch mode processing for view/jobset 'func_view_setup' finished successfully. Refer to client logfile '/home/hients/my_design/AMICA_R2_C16_ASIC/INNOVUS/rpt/06_route_opt/analysis/final_20261029_220430_51277_1793286270373820/tempus/.seco.51277.220511.out/51277_d01505a7-79d1-489e-b640-c553ee34006b_0.log' for details. Number of views/jobsets remaining for further analysis is '0'.
+ASYNC DV END retVal = 0  ************************************
+<CMD> set distributed_asynchronous_method 0
+Distributed processing is complete.
+<CMD> set distributed_asynchronous_method 1
+<CMD> set ::quick_view_processing 0
+<CMD> set_distribute_mmmc_mode -quick_view_relaunch false
+<CMD> set distributed_asynchronous_method 0
+
+*info: Finished calculating signoff timing: (totcpu=0:00:10.3, real=0:01:01, totCommandReal=0:01:03, mem=5712.4M) 
+
+
+*info: Start generating timing report ... : (mem=5712.4M)
+
+----------------------------------------------------------------------------------
+                      signoffTimeDesign Summary
+----------------------------------------------------------------------------------
+
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|     Setup mode     |    all     |  default   |  in2out    |  in2reg    |  mem2mem   |  mem2reg   |  reg2mem   |  reg2out   |  reg2reg   |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|           WNS (ns):|      0.035 |        N/A |        N/A |      1.209 |        N/A |      0.038 |      0.082 |      0.035 |      0.074 |
+|           TNS (ns):|      0.000 |        N/A |        N/A |      0.000 |        N/A |      0.000 |      0.000 |      0.000 |      0.000 |
+|    Violating Paths:|          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|func_view_setup     |      0.035 |        N/A |        N/A |      1.209 |        N/A |      0.038 |      0.082 |      0.035 |      0.074 |
+|                    |      0.000 |        N/A |        N/A |      0.000 |        N/A |      0.000 |      0.000 |      0.000 |      0.000 |
+|                    |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+
++----------------+-------------------------------+-------------------------------+
+|                |         Signal nets           |            Clock nets         |
+|    DRVs        +------------------+------------+------------------+------------+
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  | Worst Vio  |
++----------------+------------------+------------+------------------+------------+
+|   max_cap      |    797 (    780) |     -0.069 |      0 (      0) |          0 |
+|   max_tran     |      2 (      7) |     -0.003 |      0 (      0) |          0 |
+|   max_fanout   |      0 (      0) |          0 |      0 (      0) |          0 |
++----------------+------------------+------------+------------------+------------+
+
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|      Hold mode     |    all     |  default   |  in2out    |  in2reg    |  mem2mem   |  mem2reg   |  reg2mem   |  reg2out   |  reg2reg   |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|           WNS (ns):|      0.009 |        N/A |        N/A |      0.012 |        N/A |      2.210 |      0.103 |      0.227 |      0.009 |
+|           TNS (ns):|      0.000 |        N/A |        N/A |      0.000 |        N/A |      0.000 |      0.000 |      0.000 |      0.000 |
+|    Violating Paths:|          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+|func_view_hold      |      0.009 |        N/A |        N/A |      0.012 |        N/A |      2.210 |      0.103 |      0.227 |      0.009 |
+|                    |      0.000 |        N/A |        N/A |      0.000 |        N/A |      0.000 |      0.000 |      0.000 |      0.000 |
+|                    |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
++--------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+
+
+*info: End generating timing report: (totcpu=0:00:00.0, real=0:00:00.0, totCommandReal=0:01:03, mem=5712.4M) 
+
+<CMD> find_global metric_capture_pba_tns_histogram -tcl
+<CMD> getDistributeHost -mode
+<CMD> set ::restore_mt_binary 1

@@ -1,0 +1,30 @@
+Third-party technology collateral
+=================================
+
+The repository's root MIT LICENSE describes the author's own work. It does not
+relicense third-party technology collateral, EDA software, or third-party marks.
+Original copyright/header notices in LEF, Liberty and capacitance tables are
+preserved, including copies embedded inside native output checkpoints.
+
+The Nangate/Silvaco 45 nm Open Cell Library and FreePDK45 distribution are
+attributed to their respective owners. The upstream distribution's Apache 2.0
+LICENSE and Silvaco contribution NOTICE are retained in licenses/. Reference:
+https://foss-eda-tools.googlesource.com/third_party/freepdk45/+/954b16e2fcd52994e9d3c8b5af35b5f91d261889/
+
+These are project-adapted technology copies, not a claim of byte identity with
+the upstream release. Comparison against that release found the following:
+- stdcells*.lib: a WELLTAP_X1 physical-cell entry is added; the remaining lines
+  match the corresponding upstream fast/slow/typical Liberty files.
+- rtk-tech.lef: the manufacturing grid differs (0.0025 rather than 0.0050).
+- stdcells.lef: project macro-only/physical-cell LEF rather than the upstream
+  combined technology-and-cell LEF.
+- rtk-typical.captable: matches the upstream NCSU_FreePDK_45nm.capTbl by SHA-256.
+The publication preserves the project's bytes; it does not substitute newer
+upstream technology or claim that these edits establish signoff qualification.
+
+SRAM LEF/Liberty abstracts are retained project collateral. They are simplified
+models and must not be described as qualified foundry timing/physical views.
+No RTL, foundry rule decks, tool binaries, license keys or EDA installers are
+part of the new AMICA publication. Native checkpoint dependency/configuration
+Tcl files are retained inside output so those saved bundles are not silently
+stripped; no standalone synthesis or place-and-route flow is supplied.

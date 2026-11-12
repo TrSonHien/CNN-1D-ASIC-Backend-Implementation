@@ -1,0 +1,32 @@
+Copyright 2008-2021 Silvaco, Inc. 
+
+
+Contributed Materials
+
+Silvaco Inc. has submitted to Si2 the following materials (“Contribution”):
+
+	45nm Open-Source Digital Cell Library (“Library”)
+
+This submission hereunder constitutes a “Contribution” under the Si2 Project and OpenStandards IP. For avoidance of doubt, any portions of the Contribution consisting of source code or software are contributed pursuant to the Apache 2.0 license accompanying such material. 
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+Documentation is contributed pursuant to the Creative Commons License, Version 4.0 (CCL-4.0).
+
+This work is licensed under the Creative Common Attribution 4.0 International License. 
+To view a copy of this license visit: https://creativecommons.org/licenses/by/4.0/
+or send a letter to Creative Commons PO Box 1866, Mountainview CA 94042, USA.
+
+
+Under the terms of this Contribution, the materials are to be posted to Si2’s website (www.si2.org) and made available to members and Universities for download and use at no charge. Non-members may visit https://silvaco.com/services/library-design/ for further information on obtaining the Library.

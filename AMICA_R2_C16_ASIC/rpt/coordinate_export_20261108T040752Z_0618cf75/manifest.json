@@ -1,0 +1,11 @@
+{
+  "source": "/home/hients/calibre/AMICA_R2_C16_ASIC_sync_20261107_161416_8c9830b633/runs/drc_20261108_100655_xVrCfG/drc.results",
+  "source_sha256": "337a8dfdaba1453b3dab79600409a39a7f2f2dd00819a3dc0461eda5691cc73f",
+  "result_count": 1458,
+  "summary_verified": true,
+  "files": {
+    "coordinates.csv": "954e3585225fd430361cf0994ca9b103343d602e4cd8e0e22084eb0d1e50cfe5",
+    "coordinates.rpt": "07a609d7e286999ce5b7827b5dadf3294af40809c53bbd18cae466607ea81d52",
+    "markers.json": "8a607741e3c1be5c77333e581cbcacf3e9c956c44eee639d01e02d4040064e58"
+  }
+}

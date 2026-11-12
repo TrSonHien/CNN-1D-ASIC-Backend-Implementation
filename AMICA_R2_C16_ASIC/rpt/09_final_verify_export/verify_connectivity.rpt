@@ -1,0 +1,23 @@
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Nov  7 20:49:26 2026
+
+Design Name: AMICA_R2_C16_ASIC
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (1845.4700, 1896.4400)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+Use 16 pthreads
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sat Nov  7 20:49:28 2026
+Time Elapsed: 0:00:02.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:12.7  MEM: 0.000M)
+

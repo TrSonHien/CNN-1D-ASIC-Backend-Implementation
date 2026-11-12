@@ -25,6 +25,7 @@ stage-identification limits are described in the report.
 README.md
 LICENSE
 THIRD_PARTY_NOTICES.txt
+ARTIFACTS_SHA256SUMS.txt
 licenses/
 ├── FreePDK45-Apache-2.0.txt
 └── FreePDK45-NOTICE.txt
@@ -35,35 +36,33 @@ images/
 ├── CNN_adv_macro_map.png
 ├── AMICA_R2_C16_ASIC_floorplan.png
 └── optimization_comparison.png
-AMICA_R2_C16_ASIC/
-├── ARTIFACTS_SHA256SUMS.txt
-├── input_data/
-│   ├── all_lef_files.tcl
-│   ├── mmmc.view
-│   ├── lef/
-│   ├── lib/
-│   ├── captbl/
-│   ├── map/
-│   ├── sdc/
-│   │   ├── constraints.sdc
-│   │   └── post_synthesis_constraints.sdc
-│   └── netlist/
-│       └── AMICA_R2_C16_ASIC_netlist.v
-├── output/
-│   ├── synthesis/
-│   ├── 06_route_opt/
-│   ├── 07_timing_closure/
-│   └── 09_final_verify_export/
-└── rpt/
-    ├── synthesis/
-    └── ... original Innovus stage, timing and verification reports
+input_data/
+├── all_lef_files.tcl
+├── mmmc.view
+├── lef/
+├── lib/
+├── captbl/
+├── map/
+├── sdc/
+│   ├── constraints.sdc
+│   └── post_synthesis_constraints.sdc
+└── netlist/
+    └── AMICA_R2_C16_ASIC_netlist.v
+output/
+├── synthesis/
+├── 06_route_opt/
+├── 07_timing_closure/
+└── 09_final_verify_export/
+rpt/
+├── synthesis/
+└── ... original Innovus stage, timing and verification reports
 ```
 
-The existing root-level `SAVED/`, `input_data/`, `output/` and `rpt/`, and the
-older report, are preserved from the previous baseline publication. They are
-**not AMICA data**. Use the explicitly named `AMICA_R2_C16_ASIC/` folder for
-this handoff. The layout above shows the new publication, not a relabeling of
-those existing baseline files.
+The root-level `input_data/`, `output/` and `rpt/` now contain **AMICA data**,
+replacing the former baseline folders. The redundant `AMICA_R2_C16_ASIC/`
+wrapper has been removed. Previous folder contents remain recoverable in Git
+history. The legacy baseline `SAVED/`, older report and existing images are
+retained separately; `SAVED/` is **not** an AMICA checkpoint directory.
 
 ## AMICA inputs and outputs
 
@@ -92,12 +91,12 @@ input configuration files are also intentionally retained.
 The final raw GDS exceeds GitHub's regular-file size limit. It is stored as
 `AMICA_R2_C16_ASIC.gds.gz`, with lossless gzip compression; its decompressed
 SHA-256 was checked against the original. No new Git LFS storage is required
-for the AMICA addition. Existing legacy LFS files are unchanged.
+for the AMICA artifacts.
 
 Check the published files before decompressing:
 
 ```sh
-cd AMICA_R2_C16_ASIC
+# Run from the repository root
 sha256sum -c ARTIFACTS_SHA256SUMS.txt
 ```
 

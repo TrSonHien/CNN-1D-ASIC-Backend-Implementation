@@ -18,28 +18,34 @@ if {![info exists PROJ_DIR]} {
 create_library_set -name gsclib045_fast \
    -timing [list \
       ${PROJ_DIR}/input_data/lib/stdcells-bc.lib \
-      ${PROJ_DIR}/input_data/lib/SRAM_32x256_1rw_FF_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_4x2048_1rw_FF_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x1024_1rw_FF_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x4096_1rw_FF_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x256_1rw_FF_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x512_1rw_FF_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x16_1rw_FF_1p0V_25C.lib \
    ]
 
 create_library_set -name gsclib045_slow \
    -timing [list \
       ${PROJ_DIR}/input_data/lib/stdcells-wc.lib \
-      ${PROJ_DIR}/input_data/lib/SRAM_32x256_1rw_SS_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_4x2048_1rw_SS_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x1024_1rw_SS_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x4096_1rw_SS_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x256_1rw_SS_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x512_1rw_SS_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x16_1rw_SS_1p0V_25C.lib \
    ]
 
 create_library_set -name gsclib045_typical \
    -timing [list \
       ${PROJ_DIR}/input_data/lib/stdcells.lib \
-      ${PROJ_DIR}/input_data/lib/SRAM_32x256_1rw_TT_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_4x2048_1rw_TT_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x1024_1rw_TT_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x4096_1rw_TT_1p0V_25C.lib \
       ${PROJ_DIR}/input_data/lib/SRAM_16x256_1rw_TT_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x512_1rw_TT_1p0V_25C.lib \
+      ${PROJ_DIR}/input_data/lib/SRAM_16x16_1rw_TT_1p0V_25C.lib \
    ]
 
 create_op_cond -name FAST \

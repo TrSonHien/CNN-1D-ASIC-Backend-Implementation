@@ -9,27 +9,50 @@ Checking row out of die ...
 Checking routing blockage.....
 Checking placement blockage.....
 placeBlkGrid grid_type = 1 
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1791.0600000000 , 67.3175000000) (1795.3100000000 , 815.7450000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1780.3100000000 , 1607.3325000000) (1795.3100000000 , 1831.3200000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1780.3100000000 , 1373.3450000000) (1795.3100000000 , 1597.3325000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1780.3100000000 , 1139.3575000000) (1795.3100000000 , 1363.3450000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1780.3100000000 , 905.3700000000) (1795.3100000000 , 1129.3575000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(50.1600000000 , 1139.3575000000) (65.1600000000 , 1363.3450000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(50.1600000000 , 1607.3325000000) (65.1600000000 , 1831.3200000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(50.1600000000 , 1373.3450000000) (65.1600000000 , 1597.3325000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(50.1600000000 , 905.3700000000) (65.1600000000 , 1129.3575000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(211.9800000000 , 905.3700000000) (221.9800000000 , 1129.3575000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(368.8000000000 , 905.3700000000) (378.2175000000 , 1129.3575000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1623.4900000000 , 905.3700000000) (1633.4900000000 , 1129.3575000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1623.4900000000 , 67.3175000000) (1633.4900000000 , 813.5475000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1435.9200000000 , 65.1200000000) (1465.9200000000 , 127.9600000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1346.2950000000 , 65.1200000000) (1356.2950000000 , 127.9600000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1435.9200000000 , 137.9600000000) (1465.9200000000 , 200.8000000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1346.2950000000 , 137.9600000000) (1356.2950000000 , 200.8000000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1435.9200000000 , 210.8000000000) (1465.9200000000 , 273.6400000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(1346.2950000000 , 210.8000000000) (1356.2950000000 , 273.6400000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (IMPFP-7410):	PlacementBlockage ({(211.9800000000 , 1139.3575000000) (221.9800000000 , 1363.3450000000)}) is NOT on grid InstanceGrid. please correct it.
+**WARN: (EMS-27):	Message (IMPFP-7410) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+This error is repeated 114 times 
 Checking components.....
-**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_low and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_low and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_high and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_instruction_memory/u_instruction_mem/gen_asic_memory_gen_sram_64x256_u_sram_high and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank0/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank0/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank1/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank1/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank2/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank2/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank3/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_weight_memory/u_bank3/gen_asic_memory_gen_sram_16x4096_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank0/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank0/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank1/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank1/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank2/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank2/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank3/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
-**WARN: (IMPFP-10013):	Halo should be created around block u_bias_memory/u_bank3/gen_asic_memory_gen_sram_16x256_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_bias_memory/g_mem_0__u_ram/u_hard_sram/g_fm_bias_16x1024_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_bias_memory/g_mem_0__u_ram/u_hard_sram/g_fm_bias_16x1024_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_bias_memory/g_mem_1__u_ram/u_hard_sram/g_fm_bias_16x1024_u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_bias_memory/g_mem_1__u_ram/u_hard_sram/g_fm_bias_16x1024_u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_0__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_0__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_1__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_1__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_2__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_0__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_2__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_0__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_0__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_1__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_1__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_2__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_partial_sum_memory/g_psum_row_1__u_psum_bram/u_hard_sram/g_psum_48x16_g_lane_2__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_instruction_memory/u_instruction_mem/u_hard_sram/g_inst_desc_64x256_g_lane_0__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_instruction_memory/u_instruction_mem/u_hard_sram/g_inst_desc_64x256_g_lane_0__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_instruction_memory/u_instruction_mem/u_hard_sram/g_inst_desc_64x256_g_lane_1__u_sram and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block u_core/u_instruction_memory/u_instruction_mem/u_hard_sram/g_inst_desc_64x256_g_lane_1__u_sram and snapping rules are not checked since it's height is not multiple of default tech site's height.
 **WARN: (EMS-27):	Message (IMPFP-10013) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 Checking IO Pads out of die...
@@ -40,34 +63,35 @@ No. of regular pre-routes not on tracks : 0
 
 Reporting Utilizations.....
 
-Core utilization  = 64.172405
-TU for constraint module  u_global_arbiter = 9.280593
-TU for constraint module  u_controller = 25.666875
-TU for constraint module  u_ifm_arbiter = 12.430967
-TU for constraint module  u_line_buffer = 32.349449
-TU for constraint module  u_pea = 84580339200000.000000
+Core utilization  = 57.755697
+TU for constraint module  u_core/u_global_average_pool1d = 42.976386
+TU for constraint module  u_core/u_global_arbiter = 14.843286
+TU for constraint module  u_core/u_line_buffer = 47.813600
+TU for constraint module  u_core/u_ifm_arbiter = 15.750101
+TU for constraint module  u_core/u_writeback_rotator = 946215200000.000000
+TU for constraint module  u_core/u_maxpool1d = 1114327200000.000000
+TU for constraint module  u_core/u_dfp_relu_output_stage = 10958029600000.000000
+TU for constraint module  u_core/u_instruction_memory = 75.305192
+TU for constraint module  u_core/u_descriptor_memory = 70.475117
+TU for constraint module  u_core/u_pea = 31.482787
+TU for constraint module  u_core/u_controller = 47.805115
+TU for constraint module  u_core/u_partial_sum_memory = 13.869374
+TU for constraint module  u_core/u_weight_memory = 77.689416
+TU for constraint module  u_core/u_ping_fmap_memory = 77.229817
+TU for constraint module  u_core/u_pong_fmap_memory = 80.012220
+TU for constraint module  u_core/u_bias_memory = 64.783263
 Effective Utilizations
-
 Average macro density = 0.000.
-Average module density = 0.237.
-Density for module 'u_global_arbiter' = 0.235.
-       = stdcell_area 1434 sites (381 um^2) / alloc_area 6093 sites (1621 um^2).
-Density for module 'u_controller' = 0.371.
-       = stdcell_area 25386 sites (6753 um^2) / alloc_area 68351 sites (18181 um^2).
-Density for module 'u_ifm_arbiter' = 0.242.
-       = stdcell_area 18180 sites (4836 um^2) / alloc_area 74991 sites (19948 um^2).
-Density for module 'u_line_buffer' = 0.416.
-       = stdcell_area 20141 sites (5358 um^2) / alloc_area 48407 sites (12876 um^2).
-Pure std cell Density 0.234451
- Density for the rest of the design = 0.231.
-       = stdcell_area 1190549 sites (316686 um^2) / alloc_area 5158038 sites (1372038 um^2).
-Density for the design = 0.234.
-       = stdcell_area 1255690 sites (334014 um^2) / alloc_area 5355880 sites (1424664 um^2).
-Pin Density = 0.06654.
-            = total # of pins 769897 / total area 11570196.
+Average module density = 0.180.
+Pure std cell Density 0.180433
+ Density for the design = 0.180.
+       = stdcell_area 925044 sites (246062 um^2) / alloc_area 5126795 sites (1363727 um^2).
+Pin Density = 0.03906.
+            = total # of pins 460253 / total area 11784355.
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   IMPFP-10013         84  Halo should be created around block %s a...
-*** Message Summary: 84 warning(s), 0 error(s)
+WARNING   IMPFP-7410         114  PlacementBlockage (%s) is NOT on grid %s...
+WARNING   IMPFP-10013        108  Halo should be created around block %s a...
+*** Message Summary: 222 warning(s), 0 error(s)
 
